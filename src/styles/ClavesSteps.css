@@ -89,7 +89,6 @@
     margin-right: auto;
   }
 
-
   .claves-para-exito-title-p {
     text-align: center;
     margin-left: auto;
@@ -119,6 +118,8 @@
 
 .claves-para-exito-button-div {
   text-align: center;
+  margin-left: auto!important;
+  margin-right: auto !important;
 }
 
 .claves-para-exito-col-first{

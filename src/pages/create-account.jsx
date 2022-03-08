@@ -59,7 +59,7 @@ export default function CreateAccount() {
         <Row>
           <div key={`inline-radio`} className="mb-3 radio-div">
           <label className='create-account-label-radio'>
-          <input type="radio" name="group1" id={`inline-radio-1`} className="create-account-radio" />
+          <input type="radio" name="group1" id={`inline-radio-1`} className="create-account-radio" defaultChecked={true} />
             <span className="create-account-label-radio-span">4% Plan Basico</span>
           </label>
 
