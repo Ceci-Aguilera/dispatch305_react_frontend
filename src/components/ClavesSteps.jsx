@@ -108,13 +108,13 @@ function ClavesSteps() {
           <p className="claves-para-exito-tag-p">Sobre Nosotros</p>
 
           <h2 className="claves-para-exito-tag-h2">
-            All 4 Loads es un servicio de dispatch para owners y pequenas
-            companias de cargas.
+            Dispatch 305 es un servicio especialmente diseñado para owners op y
+            pequenas companias de cargas.
           </h2>
 
           <h2 className="claves-para-exito-tag-h2">
-            Contamos con herramientas especializadas y amplia experciencia en la
-            industria de las cargas para ofrecerle el mejor precio cada dia.
+            Contamos con herramientas dedicadas, así como amplia experciencia en
+            la industria de las cargas para ofrecerle el mejor precio cada dia.
           </h2>
         </div>
       </Col>

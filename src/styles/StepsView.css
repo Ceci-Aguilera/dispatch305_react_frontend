@@ -19,5 +19,11 @@
   }
 
 .start-step-card-footer{
-    padding-top: 0px !important;
+    margin-top: -25px !important;
+}
+
+@media screen and (max-width:578px){
+  .start-step-col {
+    margin-bottom: 50px;
+  }
 }

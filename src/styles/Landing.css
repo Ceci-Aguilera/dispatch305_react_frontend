@@ -124,8 +124,8 @@
 
   .landing-paragraph{
     margin-top: 50px;
+    text-align: justify;
   }
-
   .contact-banner{
     height: 60px;
   }
@@ -136,5 +136,9 @@
     line-height: 70px;
     margin-left:15px;
     margin-right: 15px;
+  }
+
+  .comenzar-button-div {
+    margin-top: 25px;
   }
 }
