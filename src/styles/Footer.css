@@ -77,6 +77,17 @@
     margin-bottom: 20px;
 }
 
+.contact-us-s-media-row{
+    margin-top: 20px;
+}
+
+.developer-url-text{
+    color: #9d9e9f;
+    text-decoration: none !important;
+    outline:none !important;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 578px){
     .footer-nav{
         margin-left:auto;

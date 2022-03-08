@@ -35,13 +35,16 @@ function Footer() {
 
         <Row className="footer-nav-row">
           <div className="list-of-usa-states-div">
+          <p>24/7 TRUCK DISPATCH ALL 48 STATES</p>
+
             <p>
               AK, AZ, AR, CA, CO, CT, DE, FL, GA, ID, IL, IN, IA, KS, KY, LA,
               ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND,
               OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY
             </p>
-            <p>24/7 TRUCK DISPATCH ALL 48 STATES</p>
+           
             <p>Copyright © 2022 Website Design by Aguilera’s Design Inc.</p>
+              <p className="developer-url-text">Developed by Cecilia Fernandez Aguilera</p>
           </div>
         </Row>
 
