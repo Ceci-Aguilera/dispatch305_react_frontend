@@ -259,5 +259,10 @@
   .create-account-form-group {
     width: 90%;
   }
+
+  .create-account-form-control, .create-account-upload-file-div {
+    height: 70px;
+  }
+
   
 }

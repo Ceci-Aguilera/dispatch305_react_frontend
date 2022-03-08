@@ -76,12 +76,30 @@
 }
 
 @media screen and (max-width: 578px){
+
+  .claves-para-exito-header-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .claves-para-exito-icon-div{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
   .claves-para-exito-title-p {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .claves-text-div {
-    margin-left: -15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .claves-para-exito-col-second{
@@ -104,8 +122,8 @@
 }
 
 .claves-para-exito-col-first{
-  /* margin-left:auto !important;
-  margin-right:auto !important; */
+  margin-left:auto !important;
+  margin-right:auto !important;
   width:90%;
 }
 

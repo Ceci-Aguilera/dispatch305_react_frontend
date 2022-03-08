@@ -1,4 +1,4 @@
-.spacer {
+.banner-spacer {
   height: 50px !important;
   background-color: transparent !important;
 }
@@ -107,6 +107,11 @@
 
 
 @media screen and (max-width: 578px){
+  
+  .banner-spacer{
+    height: 0px !important;
+  }
+  
   .landing-custom-header2 {
     font-size: 40px !important;
     font-weight: bold;
@@ -122,14 +127,13 @@
   }
 
   .contact-banner{
-    height: 200px;
+    height: 90px;
   }
-  
 
   .contact-banner-title-h2{
     font-size: 40px!important;
     letter-spacing: 10px;
-    line-height: 100px;
+    line-height: 50px;
     margin-left:15px;
     margin-right: 15px;
   }

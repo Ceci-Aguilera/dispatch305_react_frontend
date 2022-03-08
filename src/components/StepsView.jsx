@@ -19,7 +19,7 @@ function StepsViews() {
 
           <Card.Body className="start-step-card-body">
             <h4 className="start-step-h4">
-              <span className="futura-font">Firmar el agreement</span>
+              Firmar el agreement
             </h4>
           </Card.Body>
 
@@ -38,7 +38,7 @@ function StepsViews() {
           </Card.Header>
 
           <Card.Body className="start-step-card-body">
-            <h4 className="start-step-h4"><span className="futura-font">Enviar los documentos</span></h4>
+            <h4 className="start-step-h4">Enviar los documentos</h4>
           </Card.Body>
 
           <Card.Footer className="start-step-card-footer">
@@ -56,7 +56,7 @@ function StepsViews() {
           </Card.Header>
 
           <Card.Body className="start-step-card-body">
-            <h4 className="start-step-h4"><span className="futura-font">Comenzar a cargar</span></h4>
+            <h4 className="start-step-h4">Comenzar a cargar</h4>
           </Card.Body>
 
           <Card.Footer className="start-step-card-footer">

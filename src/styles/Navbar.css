@@ -55,8 +55,9 @@
 
   .navbar-brand-img{
     width: 100%;
+    max-width: 200px;
     height: 50px;
-    margin-left: 25px;
+    margin-left: 25px !important;
   }
 
   .navbar-toggle{
@@ -65,5 +66,9 @@
 
   .navbar-nav{
     background-color: white !important;
+  }
+
+  .navbar-link:hover:after {
+    transform: scaleX(1);
   }
 }

@@ -14,7 +14,8 @@ export default function Landing() {
   return (
     <div>
       <BannerCarousel />
-      <div className="spacer" />
+      <div className="banner-spacer" />
+
       <p className="text-center">
         <span className="third-color-span p-header-font">Que ofrecemos</span>
       </p>
@@ -49,8 +50,8 @@ export default function Landing() {
 
       <div className="spacer" />
 
-      <h2 className="text-center custom-header2">
-        <span className="din-alternate-bold-font">Comenzar es muy facil</span>
+      <h2 className="text-center landing-custom-header2">
+        <span className="landing-din-alternate-bold-font">Comenzar es muy facil</span>
       </h2>
 
       <div className="start-step-div">
