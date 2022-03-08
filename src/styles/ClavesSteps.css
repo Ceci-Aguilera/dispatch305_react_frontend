@@ -96,7 +96,7 @@
   }
 
   .claves-text-div {
-    text-align: center;
+    text-align: justify;
     margin-left: auto;
     margin-right: auto;
   }
@@ -109,11 +109,12 @@
 
   .claves-para-exito-tag-h2{
     font-size: 25px !important;
+    text-align: justify;
 }
 
 .claves-para-exito-tag-p {
   margin-top:50px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .claves-para-exito-button-div {
