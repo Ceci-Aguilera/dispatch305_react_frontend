@@ -247,4 +247,17 @@
   .create-account-label-radio  .create-account-label-radio-span:after {
     top: -10px;
   }
+
+  .create-account-paragraph-div {
+    width: 80%;
+  }
+
+  .create-account-form-div {
+    width: 100%;
+  }
+  
+  .create-account-form-group {
+    width: 90%;
+  }
+  
 }

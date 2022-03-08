@@ -92,5 +92,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .service-custom-title {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   
 }

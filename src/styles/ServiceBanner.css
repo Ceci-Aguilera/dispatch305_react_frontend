@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.banner-img {
+.complexBanner-banner-img {
   object-fit: cover;
   object-position: center;
   height: 90vh !important;
@@ -115,6 +115,11 @@
       margin-right: auto !important;
       text-align: center;
     }
+
+    .complexBanner-div, .complexBanner-img-div,.complexBanner-tag-div, .complexBanner-banner-img {
+      height: 70vh !important;
+    }
+    
     
     
     

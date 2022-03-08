@@ -15,7 +15,7 @@ function ServiceBanner() {
           width={"100%"}
           height="700"
           alt="Service Truck Cargo"
-          className="banner-img"
+          className="complexBanner-banner-img"
         />
       </div>
 

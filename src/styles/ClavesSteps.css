@@ -1,6 +1,3 @@
-.claves-para-exito-col-body{
-   
-}
 .claves-para-exito-button-div {
   color: white !important;
   background-color: #f89422 !important;
@@ -101,4 +98,17 @@
   margin-top:50px;
   text-align: center;
 }
+
+.claves-para-exito-button-div {
+  text-align: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.claves-para-exito-col-first{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  width:90%;
+}
+
 }
