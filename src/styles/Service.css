@@ -1,0 +1,96 @@
+.service-custom-header2 {
+  font-size: 3vw !important;
+  font-weight: bold;
+}
+
+.spacer {
+  height: 50px !important;
+  background-color: transparent !important;
+}
+
+.service-din-alternate-bold-font {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 4.9vw !important;
+}
+
+.service-custom-title {
+  margin-top: 50px;
+  font-family: "Futura" !important;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.service-dollar-icon-div {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-plans-div {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-plan-title {
+  color: #f89422;
+  text-align: center;
+  font-family: "Futura" !important;
+  font-size: 2vw;
+}
+
+.service-p{
+  color: #9d9e9f;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.service-button-div{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-button{
+  height: 50px;
+  width: 200px;
+  background-color: #f89422 !important;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.service-button:hover,
+.service-button:active,
+.service-button:after,
+.service-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+@media screen and (max-width:578px) {
+  .service-custom-header2 {
+    font-size: 40px !important;
+  }
+
+  .service-din-alternate-bold-font {
+    font-size: 40px !important;
+  }
+
+  .service-plan-title {
+    font-size: 20px;
+  }
+
+  .service-p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}

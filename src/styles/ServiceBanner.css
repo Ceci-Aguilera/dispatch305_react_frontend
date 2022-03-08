@@ -1,0 +1,142 @@
+.complexBanner-div {
+  color: white !important;
+  position: relative;
+  height: 90vh;
+}
+
+.complexBanner-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+.banner-img {
+  object-fit: cover;
+  object-position: center;
+  height: 90vh !important;
+  width: 100%;
+}
+
+.complexBanner-tag-div {
+  width: 50%;
+  height: 90vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complexBanner-text-div {
+  width: 80%;
+  max-width: 550px;
+  height: max-content;
+  margin-left: auto;
+  align-items: center;
+}
+
+.complexBanner-header-p{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.custom-header2 {
+    font-size: 3vw !important;
+    font-weight: bold;
+  }
+
+  .complexBanner-din-alternate-bold-font{
+    font-family: "DIN Alternate Bold" !important;
+    font-weight: bold !important;
+    font-size: 3.5vw !important;
+  }
+  
+  .complexBanner-header-p-light{
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+.complexBanner-icon-div  {
+    text-align: center !important;
+    margin-top: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .complexBanner-button-div{
+    text-align: center !important;
+    margin-top: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .complexBanner-button{
+    background-color: transparent !important;
+    height: 50px;
+    width: fit-content;
+    border: 1px solid white !important;
+    border-radius: 0 !important;
+    font-weight: bold;
+  }
+  
+  .complexBanner-button:hover,
+  .complexBanner-button:active,
+  .complexBanner-button:after,
+  .complexBanner-button:focus{
+    background-color: #35363a !important;
+    border: 1px solid #35363a !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+ 
+  @media screen and (max-width: 578px){
+    .complexBanner-tag-div {
+      width: 100%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center;
+    }
+    
+    
+    
+    .complexBanner-icon{
+      width: 80px;
+    }  
+
+    .complexBanner-text-div {
+      width: 100%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center;
+    }
+
+    .complexBanner-header-p-light{
+      width: 90%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center;
+    }
+
+    .complexBanner-din-alternate-bold-font{
+      font-size: 40px !important;
+    }
+  }

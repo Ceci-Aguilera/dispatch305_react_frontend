@@ -1,0 +1,14 @@
+.service-grid-div{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.service-grid-card{
+    width:100% !important;
+    max-width: 450px !important;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,92 @@
+.contact-us-tag-p {
+  color: #9d9e9f;
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.contact-us-tag-h2 {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 3.5vw !important;
+}
+
+.contact-us-col-first {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  width: 90%;
+}
+
+.contact-us-col-second {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  width: 90%;
+}
+
+.tspan {
+  color: transparent !important;
+}
+
+.contact-us-form-control {
+  height: 60px;
+  border-radius: 0;
+  border-color: #9d9e9f !important;
+}
+
+.contact-us-form-control::placeholder {
+  color: #9d9e9f !important;
+}
+
+.contact-us-control-message {
+  border-radius: 0;
+  border-color: #9d9e9f !important;
+}
+
+.contact-us-control-message::placeholder {
+  color: #9d9e9f !important;
+}
+
+.contact-us-button {
+  width: 100% !important;
+  height: 60px;
+  background-color: #f89422 !important;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.contact-us-button:hover,
+.contact-us-button:active,
+.contact-us-button:after,
+.contact-us-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+
+
+
+
+@media screen and (max-width:578px){
+  .contact-us-col-first {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 98%;
+  }
+
+  .contact-us-tag-p {
+    text-align: center;
+  }
+
+  .contact-us-tag-h2 {
+    text-align: center;
+    font-size: 25px !important;
+  }
+
+  .contact-us-col-second {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 98%;
+  }
+}

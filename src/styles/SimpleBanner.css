@@ -1,0 +1,35 @@
+.CreateAccountBanner-div {
+  color: white !important;
+  position: relative;
+  height: 90vh;
+}
+
+.banner-img {
+  object-fit: cover;
+  object-position: center;
+  height: 90vh !important;
+  width: 100%;
+}
+
+.CreateAccountBanner-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+@media screen and (max-width: 578px){
+  .CreateAccountBanner-div {
+    height: 50vh;
+  }
+  
+  .banner-img {
+    height: 50vh!important;
+  }
+  
+  .CreateAccountBanner-img-div {
+    height: 50vh;
+  }
+}

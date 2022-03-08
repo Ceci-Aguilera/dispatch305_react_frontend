@@ -1,0 +1,104 @@
+.claves-para-exito-col-body{
+   
+}
+.claves-para-exito-button-div {
+  color: white !important;
+  background-color: #f89422 !important;
+  height: 50px;
+  width: 200px;
+  margin-left: 50px;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-weight: bold;
+}
+
+.claves-para-exito-button-p {
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+.claves-para-exito-header-div {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.v-spacer {
+  width: 15px;
+}
+
+.claves-para-exito-card-body {
+  margin-top: 10px;
+}
+
+.claves-para-exito-title-p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.claves-text-div {
+  color: #9d9e9f;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.spacer {
+  height: 50px !important;
+  background-color: transparent !important;
+}
+
+.spacer-25 {
+  height: 25px !important;
+  background-color: transparent !important;
+}
+
+.claves-para-exito-tag-p {
+  color: #9d9e9f;
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.claves-para-exito-tag-h2{
+    font-family: "DIN Alternate Bold" !important;
+    font-weight: bold !important;
+    font-size: 2.8vw !important;
+}
+
+.claves-para-exito-col-first{
+    margin-left:0 !important;
+    margin-right:auto !important;
+    width:90%;
+}
+
+.claves-para-exito-col-second{
+    margin-left:auto !important;
+    margin-right:0 !important;
+    width:90%;
+}
+
+@media screen and (max-width: 578px){
+  .claves-para-exito-title-p {
+    text-align: center;
+  }
+
+  .claves-text-div {
+    margin-left: -15px;
+  }
+  
+  .claves-para-exito-col-second{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    width:98%;
+}
+
+  .claves-para-exito-tag-h2{
+    font-size: 25px !important;
+}
+
+.claves-para-exito-tag-p {
+  margin-top:50px;
+  text-align: center;
+}
+}

@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: local("Arial"),
+    url("./assets/fonts/Arial/Arial.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: local("Arial Bold"),
+    url("./assets/fonts/Arial/Arial Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "DIN Alternate Bold";
+  src: local("DIN Alternate Bold"),
+    url("./assets/fonts/DIN Alternate/DIN Alternate Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "DIN Condensed Bold";
+  src: local("DIN Condensed Bold"),
+    url("./assets/fonts/DIN Condensed/DIN Condensed Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: local("Futura"),
+    url("./assets/fonts/Futura/Futura.ttc") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: local("MyriadPro"),
+    url("./assets/fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype");
+  font-weight: normal;
+}
+
+*{
+  font-family: "Arial";
+}
+

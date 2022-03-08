@@ -1,0 +1,92 @@
+.footer {
+  width: 100%;
+  height: max-content;
+  min-height: 300px;
+  background-color: #35363a;
+  margin-top:100px;
+  color: #9d9e9f !important;
+}
+
+.footer-nav{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-link{
+    text-decoration: none;
+    outline: none;
+    color: #9d9e9f;
+    font-size: 1.2rem;
+    font-weight:bold;
+}
+
+.footer-link:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #f89422;
+    color: #f89422 !important;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    transform-origin: 50% 50%;
+  }
+  
+  .footer-link:hover:after {
+    transform: scaleX(1);
+    color: #f89422 !important;
+    transform-origin: 50% 50%;
+  }
+  
+  .footer-link:hover{
+    color: #9d9e9f !important;
+  }
+
+.footer-link:focus{
+    color: #f89422 !important;
+}
+
+.secondary-color-span{
+    color: #f89422
+}
+
+.list-of-usa-states-div{
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.contact-us-s-media-div{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.contact-us-s-media-div > img{
+    padding:10px;
+}
+
+.footer-space-div{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 578px){
+    .footer-nav{
+        margin-left:auto;
+        margin-right:auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .list-of-usa-states-div{
+        width: 80%;
+        margin-top: 25px;
+    }
+}

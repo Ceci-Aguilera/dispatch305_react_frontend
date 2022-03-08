@@ -1,0 +1,191 @@
+.PrincipalBanner-div {
+  color: white !important;
+  position: relative;
+  height: 90vh;
+}
+
+.PrincipalBanner-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+.banner-img {
+  object-fit: cover;
+  object-position: center;
+  height: 90vh !important;
+  width: 100%;
+}
+
+.PrincipalBanner-tag-div {
+  width: 70% !important;
+  height: 90vh !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PrincipalBanner-text-div {
+  width: 100%;
+  max-width: 750px;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  /* background-color: #35363a; */
+}
+
+.PrincipalBanner-custom-header2 {
+  font-size: 3vw !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #35363a !important;
+}
+
+.PrincipalBanner-din-alternate-bold-font {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 3.5vw !important;
+}
+
+.SecondaryBanner-div {
+  color: white !important;
+  position: relative;
+  height: 90vh;
+}
+
+.SecondaryBanner-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+.SecondaryBanner-tag-div {
+  width: 60% !important;
+  height: 90vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SecondaryBanner-text-div {
+  width: 100%;
+  max-width: 850px;
+  height: max-content;
+  margin-left: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.SecondaryBanner-custom-header2 {
+  font-size: 3vw !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #35363a !important;
+}
+
+.SecondaryBanner-din-alternate-bold-font {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 3vw !important;
+}
+
+
+
+
+.ThirdBanner-div {
+  color: white !important;
+  position: relative;
+  height: 90vh;
+}
+
+.ThirdBanner-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+.ThirdBanner-tag-div {
+  width: 100% !important;
+  height: 90vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ThirdBanner-text-div {
+  width: 100%;
+  /* max-width: 900px; */
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.ThirdBanner-custom-header2 {
+  font-size: 4vw !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #35363a !important;
+}
+
+.ThirdBanner-din-alternate-bold-font {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 4vw !important;
+}
+
+
+@media screen and (max-width: 578px){
+
+  .PrincipalBanner-div,
+  .PrincipalBanner-img-div,
+  .PrincipalBanner-img-div,
+  .banner-img,
+  .SecondaryBanner-div,
+  .SecondaryBanner-img-div,
+  .ThirdBanner-div,
+  .ThirdBanner-img-div{
+    height: 60vh !important;
+  }
+
+  
+  .PrincipalBanner-tag-div,
+  .SecondaryBanner-tag-div,
+  .ThirdBanner-tag-div  {
+    width: 100% !important;
+    margin-top: -200px !important;
+  }
+  
+  .PrincipalBanner-custom-header2,
+  .PrincipalBanner-din-alternate-bold-font,
+  .SecondaryBanner-custom-header2,
+  .SecondaryBanner-din-alternate-bold-font,
+  .ThirdBanner-custom-header2,
+  .ThirdBanner-din-alternate-bold-font  {
+    font-size: 30px !important;
+  }
+}

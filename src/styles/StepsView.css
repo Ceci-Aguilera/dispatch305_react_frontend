@@ -1,0 +1,28 @@
+
+.start-step-card, .start-step-card-header, .start-step-card-body, .start-step-card-footer{
+    text-align: center !important;
+    border: 0px;
+    background-color: transparent !important;
+}
+
+.start-step-h4{
+    color: #35363a !important;
+    font-weight: bold !important;
+}
+
+.third-color-span {
+    color: #9d9e9f;
+  }
+  
+.p-font {
+    font-size: 1.1rem !important;
+  }
+
+.start-step-card-footer{
+    padding-top: 0px !important;
+}
+
+.futura-font{
+  font-family: "Futura" !important;
+  font-weight: normal !important;
+}

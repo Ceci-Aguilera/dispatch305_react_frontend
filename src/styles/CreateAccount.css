@@ -1,0 +1,250 @@
+.create-account-custom-header2 {
+  font-size: 3vw !important;
+  font-weight: bold;
+}
+
+.spacer {
+  height: 50px !important;
+  background-color: transparent !important;
+}
+
+.create-account-din-alternate-bold-font {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+  font-size: 4.9vw !important;
+}
+
+.create-account-custom-title {
+  margin-top: 50px;
+  font-family: "Futura" !important;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.create-account-folder-icon-div {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.create-account-paragraph-div {
+  width: 60%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.create-account-paragraph-p {
+  color: #9d9e9f;
+  font-size: 1.1rem;
+}
+
+.create-account-form-div {
+  width: 80%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-account-form-group {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-account-form-control {
+  height: 60px;
+  border-radius: 0px;
+  border-color: #9d9e9f;
+}
+
+.create-account-form-control::placeholder {
+  color: #9d9e9f;
+}
+
+.create-account-upload-file-div{
+  width: 90%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  border: 1px solid #9d9e9f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+}
+
+.create-account-upload-file-p{
+  color: #9d9e9f;
+  padding-left:10px;
+  position: relative;
+  top: 25%;
+}
+
+.create-account-upload-file-label{
+  width: max-content;
+  min-width: 125px;
+  height: 30px;
+  color:white;
+  background-color: #f89422;
+  margin-right:10px !important;
+  border-radius: 50px;
+  position: relative;
+  top: 20%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.create-account-upload-file-label-p{
+  margin-top: 3px;
+}
+
+.create-account-button-div{
+  width: 100% !important;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.create-account-button {
+  width: 250px !important;
+  height: 60px;
+  background-color: #f89422 !important;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-account-button:hover,
+.create-account-button:active,
+.create-account-button:after,
+.create-account-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.spacer-15{
+  margin-top: 15px;
+}
+
+
+.radio-div{
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+
+.create-account-radio {
+  display: none;
+}
+
+
+.create-account-label-radio {
+  display: inline-block;
+  padding: 0px 0px;
+  cursor: pointer;
+}
+
+
+.create-account-label-radio  .create-account-label-radio-span {
+  position: relative;
+  line-height: 60px;
+}
+
+
+.create-account-label-radio  .create-account-label-radio-span:before,
+.create-account-label-radio  .create-account-label-radio-span:after {
+  content: '';
+}
+
+
+.create-account-label-radio  .create-account-label-radio-span:before {
+  border: 1px solid #9d9e9f;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.create-account-label-radio  .create-account-label-radio-span:after {
+  background: #f89422;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  transition: 300ms;
+  opacity: 0;
+}
+
+.create-account-label-radio .create-account-radio:checked + .create-account-label-radio-span:after {
+  opacity: 1;
+}
+
+.create-account-label-radio-span{
+  color:#f89422;
+  font-size: 2.0vw;
+}
+
+@media screen and (max-width: 578px){
+  .create-account-custom-header2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 40px !important;
+  }
+
+  .create-account-din-alternate-bold-font {
+    font-size: 40px !important;
+  }
+
+  .create-account-custom-title{
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  .create-account-upload-file-label{
+    min-width: 100px;
+  }
+
+  .create-account-col{
+    margin-top: 50px;
+  }
+
+  .create-account-button{
+    width: 90% !important;
+  }
+
+  .radio-div{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+  }
+
+  .create-account-label-radio{
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .create-account-label-radio-span{
+    font-size: 20px;
+  }
+
+  .create-account-label-radio  .create-account-label-radio-span:after {
+    top: -10px;
+  }
+}
