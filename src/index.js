@@ -26,16 +26,23 @@ import Service from "./pages/service";
 // Import Components
 import Layout from "./components/Layout";
 
+// Import Context
+import {MenuProvider} from "./context/MenuContext"
+import UserAccountInfo from "./pages/user-account";
+
 const rootElement = document.getElementById("root");
 render(
   <Router>
+  <MenuProvider>
     <Layout>
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/create-account" element={<CreateAccount />} />
         <Route exact path="/service" element={<Service />} />
+        <Route exact path="/user-account" element={<UserAccountInfo />} />
       </Routes>
     </Layout>
+    </MenuProvider>
   </Router>,
   rootElement
 );

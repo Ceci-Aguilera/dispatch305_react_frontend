@@ -1,0 +1,133 @@
+.account-div, .account-info-div, .account-info-row, .account-info-col{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.account-info-div{
+    margin-top: 80px;
+}
+
+.account-info-col{
+    width: max-content;
+}
+
+.account-info-p, .account-info-document-p{
+height: 50px;
+}
+
+.account-info-pending-bill-p{
+    text-align:center;
+}
+
+.account-info-title, .account-info-document-title{
+    color: #35363a;
+    font-family: "Arial" !important;
+    font-weight: bold !important;
+}
+
+.account-info-span, .account-info-document-span{
+    color: #9d9e9f;
+    font-weight: bold !important;
+}
+
+.user-info-button-div{
+    width: 250px;
+    margin-top: 30px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.user-info-button{
+    width: 250px;
+    height: 50px;
+    background-color: #f89422 !important;
+    border: 1px solid #f89422 !important;
+    border-radius: 0 !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.user-info-button:hover,
+.user-info-button:active,
+.user-info-button:after,
+.user-info-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.account-info-documents-div{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items:baseline !important;
+    column-gap: 20px;
+    row-gap: 5px;
+}
+
+.user-info-document-button{
+    height: 50px;
+    background-color: #f89422 !important;
+    border: 1px solid #f89422 !important;
+    border-radius: 0 !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.user-info-document-button:hover,
+.user-info-document-button:active,
+.user-info-document-button:after,
+.user-info-document-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.account-info-col{
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 578px){
+
+    .account-info-col{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .account-info-documents-div{
+        display:flex;
+        flex-direction: column !important;
+        justify-content:center !important;
+        column-gap: 0px !important;
+        row-gap: 0px !important;
+    }
+
+    .account-info-document-p{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .user-info-document-button-div{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .user-info-document-button{
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .account-info-document-p{
+        height: 50px;
+    }
+
+    .account-info-col{
+        max-width: 90%;
+    }
+}

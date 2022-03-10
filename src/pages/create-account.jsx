@@ -3,6 +3,8 @@ import "../styles/CreateAccount.css";
 
 import { useEffect, useState } from "react";
 
+import axios from "axios"
+
 import { Button, Row, Col, Form } from "react-bootstrap";
 import SimpleBanner from "../components/SimpleBanner";
 
@@ -10,12 +12,47 @@ import banner3 from "../assets/images/banner3.jpg";
 
 import regularFolderIcon from "../assets/icons/folder-icon.png";
 
+import { useNavigate } from "react-router-dom";
+
+
+
 export default function CreateAccount() {
   const [authority_letter_document, setAuthorityLetterDocument] =
     useState(null);
   const [w9_document, setW9Document] = useState(null);
   const [insurance_document, setInsuranceDocument] = useState(null);
   const [noa_document, setNOADocument] = useState(null);
+
+  const [contact_name, setContactName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company_name, setCompanyName] = useState("");
+
+  const [current_plan, setCurrentPlan] = useState("BASICO");
+
+  const navigate = useNavigate();
+
+
+  const body = JSON.stringify({
+    contact_name,
+    email,
+    phone,
+    company_name,
+    current_plan,
+  })
+
+
+  const onSubmitForm = async(e) => {
+    e.preventDefault();
+    const result = await createNewAccount(body);
+
+    console.log(result)
+    if (result == "Success"){
+      console.log("Send Files")
+      await uploadFiles(email, authority_letter_document, w9_document, insurance_document, noa_document);
+      navigate("/");
+    }
+  }
 
   return (
     <div>
@@ -57,22 +94,22 @@ export default function CreateAccount() {
 
       <div className="create-account-form-div">
         <Row>
-          <div key={`inline-radio`} className="mb-3 radio-div">
+          <div key={`inline-radio`} className="mb-3 radio-div" onChange={(e) => setCurrentPlan(e.target.value)} >
           <label className='create-account-label-radio'>
-          <input type="radio" name="group1" id={`inline-radio-1`} className="create-account-radio" defaultChecked={true} />
+          <input type="radio" name="group1" id={`inline-radio-1`} className="create-account-radio" value={"BASICO"} defaultChecked={true} />
             <span className="create-account-label-radio-span">4% Plan Basico</span>
           </label>
 
 
 
           <label className='create-account-label-radio'>
-          <input type="radio" name="group1" id={`inline-radio-2`} className="create-account-radio" />
+          <input type="radio" name="group1" id={`inline-radio-2`} className="create-account-radio" value={"VIP"} />
             <span className="create-account-label-radio-span">6% Plan VIP</span>
           </label>
             
           </div>
         </Row>
-        <Form className="create-account-form">
+        <Form className="create-account-form" onSubmit={(e)=>{onSubmitForm(e)}} >
           <Row className="create-account-row">
             <Col xs={12} sm={12} md={6} lg={6} className="create-account-col">
               <Form.Group
@@ -82,7 +119,9 @@ export default function CreateAccount() {
                 <Form.Control
                   type="text"
                   className="create-account-form-control"
-                  placeholder="NOMBRE DE LA COMAPNIA"
+                  placeholder="NOMBRE DE LA COMPAÑIA"
+                  value = {company_name}
+                  onChange = {(e) => setCompanyName(e.target.value)}
                 />
               </Form.Group>
 
@@ -94,6 +133,8 @@ export default function CreateAccount() {
                   type="text"
                   className="create-account-form-control"
                   placeholder="NOMBRE DEL CONTACTO"
+                  value = {contact_name}
+                  onChange = {(e) => setContactName(e.target.value)}
                 />
               </Form.Group>
               <Form.Group
@@ -104,6 +145,8 @@ export default function CreateAccount() {
                   type="text"
                   className="create-account-form-control"
                   placeholder="TELEFONO"
+                  value = {phone}
+                  onChange = {(e) => setPhone(e.target.value)}
                 />
               </Form.Group>
 
@@ -115,22 +158,24 @@ export default function CreateAccount() {
                   type="email"
                   className="create-account-form-control"
                   placeholder="EMAIL"
+                  value = {email}
+                  onChange = {(e) => setEmail(e.target.value)}
                 />
               </Form.Group>
             </Col>
 
             <Col xs={12} sm={12} md={6} lg={6} className="create-account-col">
-              <div className="create-account-upload-file-div">
-                <p className="create-account-upload-file-p">AUTHORITY LETTER</p>
+              <div className="create-account-upload-file-div" style={{backgroundColor: (authority_letter_document?"#f89422":"transparent")  }}>
+                <p className="create-account-upload-file-p" style={{color: (authority_letter_document?"white":"#9d9e9f")  }}>AUTHORITY LETTER</p>
                 <label
-                  for="uploadButton"
+                  for="uploadAuthorizationLetterButton"
                   className="create-account-upload-file-label"
                 >
                   <p className="create-account-upload-file-label-p">UPLOAD</p>
                 </label>
 
                 <input
-                  id="uploadButton"
+                  id="uploadAuthorizationLetterButton"
                   type="file"
                   hidden
                   accept="application/pdf"
@@ -142,17 +187,17 @@ export default function CreateAccount() {
 
               <div className="spacer-15" />
 
-              <div className="create-account-upload-file-div">
-                <p className="create-account-upload-file-p">W9</p>
+              <div className="create-account-upload-file-div" style={{backgroundColor: (w9_document?"#f89422":"transparent")  }}>
+                <p className="create-account-upload-file-p" style={{color: (w9_document?"white":"#9d9e9f")  }}>W9</p>
                 <label
-                  for="uploadButton"
+                  for="uploadW9Button"
                   className="create-account-upload-file-label"
                 >
                   <p className="create-account-upload-file-label-p">UPLOAD</p>
                 </label>
 
                 <input
-                  id="uploadButton"
+                  id="uploadW9Button"
                   type="file"
                   hidden
                   accept="application/pdf"
@@ -162,17 +207,17 @@ export default function CreateAccount() {
 
               <div className="spacer-15" />
 
-              <div className="create-account-upload-file-div">
-                <p className="create-account-upload-file-p">INSURANCE</p>
+              <div className="create-account-upload-file-div" style={{backgroundColor: (insurance_document?"#f89422":"transparent")  }}>
+                <p className="create-account-upload-file-p" style={{color: (insurance_document?"white":"#9d9e9f")  }}>INSURANCE</p>
                 <label
-                  for="uploadButton"
+                  for="uploadInsuranceButton"
                   className="create-account-upload-file-label"
                 >
                   <p className="create-account-upload-file-label-p">UPLOAD</p>
                 </label>
 
                 <input
-                  id="uploadButton"
+                  id="uploadInsuranceButton"
                   type="file"
                   hidden
                   accept="application/pdf"
@@ -182,19 +227,19 @@ export default function CreateAccount() {
 
               <div className="spacer-15" />
 
-              <div className="create-account-upload-file-div">
-                <p className="create-account-upload-file-p">
+              <div className="create-account-upload-file-div" style={{backgroundColor: (noa_document?"#f89422":"transparent")  }}>
+                <p className="create-account-upload-file-p" style={{color: (noa_document?"white":"#9d9e9f")  }}>
                   NOA (En caso de tener factoring)
                 </p>
                 <label
-                  for="uploadButton"
+                  for="uploadNOAButton"
                   className="create-account-upload-file-label"
                 >
                   <p className="create-account-upload-file-label-p">UPLOAD</p>
                 </label>
 
                 <input
-                  id="uploadButton"
+                  id="uploadNOAButton"
                   type="file"
                   hidden
                   accept="application/pdf"
@@ -217,4 +262,68 @@ export default function CreateAccount() {
       </div>
     </div>
   );
+}
+
+
+const createNewAccount = async(body) => {
+
+  const config = {
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }
+
+  const url = 'http://localhost:5000/user-account/signup';
+
+  const axios_result = await axios.post(url, body, config).then(async(res) => {
+    const result = await res.data
+    console.log(result);
+    return "Success";
+  }).catch((error) => {
+    console.log("Error")
+    return "Error";
+  })
+
+  return axios_result;
+
+}
+
+
+
+const uploadFiles = async (email, authority_letter_document, w9_document, insurance_document, noa_document) => {
+
+  const config = {
+    headers: {
+    "Content-Type": "multipart/form-data"
+  }
+  }
+
+
+  const formData = new FormData();
+
+    console.log(authority_letter_document);
+    console.log(w9_document);
+    console.log(insurance_document);
+    console.log(noa_document);
+
+
+    formData.append('documents', authority_letter_document, `authority_letter-${email}.pdf`);
+    formData.append('documents', w9_document, `w9-${email}.pdf`);
+    formData.append('documents', insurance_document, `insurance-${email}.pdf`);
+    // formData.append('w9', w9_document);
+    // formData.append('insurance', insurance_document);
+
+    if(noa_document){
+          // formData.append('noa', noa_document);
+          formData.append('documents', noa_document, `noa-${email}.pdf`);
+    }
+
+  const url = `http://localhost:5000/user-account/upload-documents/${email}`;
+
+  await axios.post(url, formData, config).then(async(res) => {
+    const result = await res.data
+    console.log(result);
+  }).catch((error) => {
+    console.log("Error")
+  })
 }

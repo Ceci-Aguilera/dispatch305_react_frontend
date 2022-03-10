@@ -1,0 +1,92 @@
+.edit-modal-header {
+  background-color: #f89422;
+  color: white;
+  text-align: center !important;
+}
+
+.edit-modal-title {
+  width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.edit-modal-form-group {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-modal-form-control {
+  height: 60px;
+  border-radius: 0px;
+  border-color: #9d9e9f;
+}
+
+.edit-modal-form-control::placeholder {
+  color: #9d9e9f;
+}
+
+.edit-modal-close-button {
+  height: 60px;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.edit-modal-save-button {
+  height: 60px;
+  background-color: #f89422 !important;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.edit-modal-save-button:hover,
+.edit-modal-save-button:active,
+.edit-modal-save-button:after,
+.edit-modal-save-button:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.document-modal-title-div{
+    margin-top: 100px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.document-modal-button-div{
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.document-modal-upload-file-label{
+    width: 250px;
+    height: 60px;
+    background-color: #f89422 !important;
+    color: white;
+    border: 1px solid #f89422 !important;
+    border-radius: 0 !important;
+    padding-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.document-modal-upload-file-label:hover,
+.document-modal-upload-file-label:active,
+.document-modal-upload-file-label:after,
+.document-modal-upload-file-label:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.document-modal-title{
+    color:#9d9e9f;
+    font-family: "Futura";
+    font-weight: bold;
+}

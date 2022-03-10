@@ -1,0 +1,11 @@
+.login-form-group {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.login-form-control {
+    height: 60px;
+    border-radius: 0px;
+    border-color: #9d9e9f;
+  }

@@ -5,31 +5,56 @@ import facebookIcon from "../assets/icons/facbook-icon.png";
 import instagramIcon from "../assets/icons/instagram-icon.png";
 import { Link } from "react-router-dom";
 
+
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+
+import {useContextMenu} from "../context/MenuContext";
+
 function Footer() {
+
+const {current_link, setCurrentLinkHelper} = useContextMenu();
+
+    useEffect(() => {
+    // console.log(current_link);
+  }, [current_link])
+
+
   return (
     <footer className="footer">
       <Container className="footer-div">
         <Row className="footer-nav-row">
           <div className="footer-nav">
-            <Link to="#" className="footer-link">
-              <span className="secondary-color-span">Home</span>
+
+            <Link exact to="/"
+              as={NavLink} className="footer-link">
+              <span onClick={()=>setCurrentLinkHelper("Home")} className={current_link=="Home"?"secondary-color-span":""}>Home</span>
             </Link>
 
-            <Link to="#" className="footer-link">
-              Nosotros
+            <Link exact to="/service"
+              as={NavLink}  className="footer-link">
+              <span onClick={()=>setCurrentLinkHelper("Nosotros")} className={current_link=="Nosotros"?"secondary-color-span":""}>Nosotros</span>
             </Link>
 
-            <Link to="#" className="footer-link">
-              Precios
+            <Link exact to="#"
+              as={NavLink}  className="footer-link">
+              <span onClick={()=>setCurrentLinkHelper("Precios")} className={current_link=="Precios"?"secondary-color-span":""} >Precios</span>
             </Link>
 
-            <Link to="#" className="footer-link">
-              Contratar
+            <Link exact to="/create-account"
+              as={NavLink}  className="footer-link">
+              <span onClick={()=>setCurrentLinkHelper("Contratar")} className={current_link=="Contratar"?"secondary-color-span":""}>Contratar</span>
             </Link>
 
-            <Link to="#" className="footer-link">
+            <Link exact to="/user-account" as={NavLink}  className="footer-link">
+              <span onClick={()=>setCurrentLinkHelper("Cuenta")} className={current_link=="Cuenta"?"secondary-color-span":""}>Cuenta</span>
+            </Link>
+            
+            <Link exact to="/"
+              as={NavLink}  className="footer-link">
               <span className="secondary-color-span">305-776-4044</span>
             </Link>
+
           </div>
         </Row>
 

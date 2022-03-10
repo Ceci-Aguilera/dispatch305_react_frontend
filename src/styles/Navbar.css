@@ -27,7 +27,7 @@
 }
 
 .navbar-link:hover:after {
-  transform: scaleX(0.5);
+  transform: scaleX(0.75);
   color: #f89422 !important;
   transform-origin: 50% 50%;
 }

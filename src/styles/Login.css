@@ -1,0 +1,114 @@
+.login-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: white !important;
+  border: 1px solid #9d9e9f !important;
+  border-radius: 0px !important;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+.login-card-header {
+  background-color: #f89422 !important;
+  color: white !important;
+  border-radius: 0px !important;
+  text-align: center;
+}
+
+.login-card-header-h2 {
+  font-family: "DIN Alternate Bold" !important;
+  font-weight: bold !important;
+}
+
+.login-form {
+  margin-top: 50px;
+}
+
+.login-form-group {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form-control {
+  height: 60px;
+  border-radius: 0px;
+  border-color: #9d9e9f;
+}
+
+.login-button-div {
+  width: 100% !important;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.login-button {
+  width: 250px !important;
+  height: 60px;
+  background-color: #f89422 !important;
+  border: 1px solid #f89422 !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button:hover,
+.login-button:active,
+.login-button:after,
+.login:focus {
+  background-color: #35363a !important;
+  border: 1px solid #35363a !important;
+}
+
+.login-signup-res-pass-div {
+  width: 90%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.login-new-account-p {
+  color: #35363a !important;
+  font-weight: bold;
+}
+
+.login-new-account-link{
+  outline: none !important;
+  color: #f89422 !important;
+  cursor: pointer;
+  text-decoration: underline 1px #f89422 !important;
+}
+
+.login-br{
+  display:none;
+}
+
+@media screen and (max-width: 578px) {
+  .login-card {
+    margin-top: 50px;
+  }
+
+  .login-card-header-h2 {
+    font-size: 40px;
+  }
+
+  .login-form-group {
+    width: 100%;
+  }
+
+  .login-br{
+    display:inline;
+  }
+}
