@@ -146,7 +146,7 @@ function Account({
           <p className="account-info-pending-bill-p">
             <span className="account-info-title">BILL PENDIENTE: </span>
             <span className="account-info-span">
-              ${parseFloat(user_info.pending_bill).toFixed(2)}
+              ${parseFloat(user_info.pending_bill?user_info.pending_bill:0.00).toFixed(2)}
             </span>
           </p>
         </Row>

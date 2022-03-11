@@ -106,7 +106,7 @@ export default function CreateAccount() {
           <input type="radio" name="group1" id={`inline-radio-2`} className="create-account-radio" value={"VIP"} />
             <span className="create-account-label-radio-span">6% Plan VIP</span>
           </label>
-            
+
           </div>
         </Row>
         <Form className="create-account-form" onSubmit={(e)=>{onSubmitForm(e)}} >

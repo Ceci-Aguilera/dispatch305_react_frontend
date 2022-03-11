@@ -10,10 +10,12 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import {useContextMenu} from "../context/MenuContext";
+import {useAuth} from "../context/AuthContext";
 
 function Footer() {
 
 const {current_link, setCurrentLinkHelper} = useContextMenu();
+const {user, login, logout} = useAuth();
 
     useEffect(() => {
     // console.log(current_link);
@@ -49,7 +51,13 @@ const {current_link, setCurrentLinkHelper} = useContextMenu();
             <Link exact to="/user-account" as={NavLink}  className="footer-link">
               <span onClick={()=>setCurrentLinkHelper("Cuenta")} className={current_link=="Cuenta"?"secondary-color-span":""}>Cuenta</span>
             </Link>
-            
+
+            {user?
+              <Link exact to="/logout" as={NavLink}  className="footer-link">
+                <span onClick={()=>setCurrentLinkHelper("Logout")} className={current_link=="Logout"?"secondary-color-span":""}>Logout</span>
+              </Link>
+            :""}
+
             <Link exact to="/"
               as={NavLink}  className="footer-link">
               <span className="secondary-color-span">305-776-4044</span>
@@ -67,7 +75,7 @@ const {current_link, setCurrentLinkHelper} = useContextMenu();
               ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND,
               OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY
             </p>
-           
+
             <p>Copyright © 2022 Website Design by Aguilera’s Design Inc.</p>
               <p className="developer-url-text">Developed by Cecilia Fernandez Aguilera</p>
           </div>

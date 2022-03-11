@@ -21,18 +21,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Import Pages
 import Landing from "./pages/index";
 import CreateAccount from "./pages/create-account";
+import UserAccountInfo from "./pages/user-account";
 import Service from "./pages/service";
+import Logout from "./pages/logout";
 
 // Import Components
 import Layout from "./components/Layout";
 
 // Import Context
 import {MenuProvider} from "./context/MenuContext"
-import UserAccountInfo from "./pages/user-account";
+import {AuthProvider} from "./context/AuthContext"
+
 
 const rootElement = document.getElementById("root");
 render(
   <Router>
+    <AuthProvider>
   <MenuProvider>
     <Layout>
       <Routes>
@@ -40,9 +44,11 @@ render(
         <Route exact path="/create-account" element={<CreateAccount />} />
         <Route exact path="/service" element={<Service />} />
         <Route exact path="/user-account" element={<UserAccountInfo />} />
+        <Route exact path="/logout" element={<Logout />} />
       </Routes>
     </Layout>
     </MenuProvider>
+  </AuthProvider>
   </Router>,
   rootElement
 );

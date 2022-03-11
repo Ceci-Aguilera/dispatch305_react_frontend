@@ -10,10 +10,12 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import {useContextMenu} from "../context/MenuContext";
+import {useAuth} from "../context/AuthContext";
 
 function CustomNavbar() {
 
   const {current_link, setCurrentLinkHelper} = useContextMenu();
+  const {user, login, logout} = useAuth();
 
   useEffect(() => {
     // console.log(current_link);
@@ -30,7 +32,7 @@ function CustomNavbar() {
             height="80"
             className="d-inline-block align-top navbar-brand-img"
             alt="React Bootstrap logo"
-            onClick={()=>setCurrentLinkHelper("Home")} 
+            onClick={()=>setCurrentLinkHelper("Home")}
           />
         </Navbar.Brand>
         <Navbar.Toggle  className="navbar-toggle" aria-controls="responsive-navbar-nav" />
@@ -60,6 +62,12 @@ function CustomNavbar() {
             <Nav.Link exact to="/user-account" as={NavLink}  className="navbar-link">
               <span onClick={()=>setCurrentLinkHelper("Cuenta")} className={current_link=="Cuenta"?"secondary-color-span":""}>Cuenta</span>
             </Nav.Link>
+
+            {user?
+              <Nav.Link exact to="/logout" as={NavLink}  className="navbar-link">
+                <span onClick={()=>setCurrentLinkHelper("Logout")} className={current_link=="Logout"?"secondary-color-span":""}>Logout</span>
+              </Nav.Link>
+            :""}
 
             <Nav.Link href="/" className="navbar-link">
               <span className="secondary-color-span">305-776-4044</span>

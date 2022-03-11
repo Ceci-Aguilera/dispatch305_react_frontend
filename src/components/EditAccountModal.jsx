@@ -7,10 +7,22 @@ import "../styles/EditAccountModal.css";
 import { Container, Button, Modal, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function EditAccountModal({ show_modal, close_modal, user_info }) {
+function EditAccountModal({ show_modal, close_modal, user_info, editAccountFunction }) {
   const [contact_name, setContactName] = useState(user_info.contact_name);
   const [phone, setPhone] = useState(user_info.phone);
   const [company_name, setCompanyName] = useState(user_info.company_name);
+
+  const body = JSON.stringify({
+    contact_name,
+    company_name,
+    phone
+  })
+
+  const editAccountHelper = async(e) => {
+      e.preventDefault();
+      await editAccountFunction(body);
+      close_modal()
+  }
 
   return (
     <Container className="edit-account-modal-container">
@@ -73,7 +85,7 @@ function EditAccountModal({ show_modal, close_modal, user_info }) {
           >
             Close
           </Button>
-          <Button variant="primary" className="edit-modal-save-button">
+          <Button variant="primary" className="edit-modal-save-button" onClick={(e) => editAccountHelper(e)}>
             Save changes
           </Button>
         </Modal.Footer>

@@ -10,13 +10,19 @@ import Login from "../components/Login";
 import Account from "../components/Account";
 import EditAccountModal from "../components/EditAccountModal";
 
+import {useAuth} from "../context/AuthContext";
+
 export default function UserAccountInfo() {
+
+  const {user, login, logout, edit_account} = useAuth();
+
+
   const user_info = {
-    contact_name: "Some Contact Name",
-    email: "SomeEmail@gmail.com",
-    phone: "1111111",
-    company_name: "Some Company Name",
-    account_type: "BASICO",
+    // contact_name: "Some Contact Name",
+    // email: "SomeEmail@gmail.com",
+    // phone: "1111111",
+    // company_name: "Some Company Name",
+    // account_type: "BASICO",
     pending_bill: "5000",
   };
 
@@ -45,18 +51,25 @@ export default function UserAccountInfo() {
     setShowEditAccountModal(false);
   };
 
+  console.log(user)
+
   return (
     <div className="profile-div">
+      {user?
+        <>
       <Account
         onClickEditAccount={handleShowEditAccountModal}
-        user_info={user_info}
+        user_info={user}
         documents_info={documents_info}
       />
       <EditAccountModal
         show_modal={show_edit_account_modal}
         close_modal={handleCloseEditAccountModal}
-        user_info={user_info}
+        user_info={user}
+      editAccountFunction={edit_account}
       />
+    </>
+  :<Login loginFunction = {login} />}
     </div>
   );
 }

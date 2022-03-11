@@ -1,11 +1,26 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 import "../styles/Login.css";
 
 import { Card, Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({loginFunction}) {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const body = JSON.stringify({
+    email,
+    password,
+  })
+
+  const loginHelper = async(e) => {
+      e.preventDefault();
+      await loginFunction(body)
+  }
+
   return (
     <Container className="login-container">
       <Card className="login-card">
@@ -14,7 +29,7 @@ function Login() {
         </Card.Header>
 
         <Card.Body className="login-card-body">
-          <Form className="login-form">
+          <Form className="login-form" onSubmit={(e) => loginHelper(e)}>
             <Form.Group
               className="mb-3 login-form-group"
               controlId="formBasicLoginEmail"
@@ -23,6 +38,8 @@ function Login() {
                 type="email"
                 className="login-form-control"
                 placeholder="EMAIL"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
 
@@ -34,6 +51,8 @@ function Login() {
                 type="password"
                 className="login-form-control"
                 placeholder="CONTRASEÑA"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
 
