@@ -30,14 +30,17 @@ export default function UserAccountInfo() {
     {
       name: "Authorization Letter",
       link: "https://localhost:3000",
+      filename:"authority_letter"
     },
     {
       name: "W9",
       link: "https://localhost:3000",
+      doc_name:"w9"
     },
     {
       name: "Insurance",
       link: "https://localhost:3000",
+      filename:"insurance"
     },
   ];
 

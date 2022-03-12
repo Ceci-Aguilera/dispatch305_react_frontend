@@ -10,6 +10,8 @@ import EditDocumentModal from "./EditDocumentModal";
 
 import banner4 from "../assets/images/banner4.jpg";
 
+import axios from "axios";
+
 function Account({
   onClickEditAccount,
   onClickEditDocuments,
@@ -62,19 +64,8 @@ function Account({
     if(doc_name === "NOA") return handleNOAModal();
   }
 
-  // const getCurrentCloseModal = (doc_name) => {
-  //   if(doc_name === "Authorization Letter") return handleCloseAuthorizationLetterModal();
-  //   if(doc_name === "W9") return handleCloseW9Modal();
-  //   if(doc_name === "Insurance") return handleCloseInsuranceModal();
-  //   if(doc_name === "NOA") return handleCloseNOAModal();
-  // }
-
-  // const getCurrentDocModal = (doc_name) => {
-  //   if(doc_name === "Authorization Letter") return show_authorization_letter_modal;
-  //   if(doc_name === "W9") return show_w9_modal;
-  //   if(doc_name === "Insurance") return show_insurance_modal;
-  //   if(doc_name === "NOA") return show_noa_modal;
-  // }
+  console.log("User model from API")
+  console.log(user_info)
 
 
   return (
@@ -123,7 +114,9 @@ function Account({
                       {doc_info.name}:{" "}
                     </span>
                     <span className="account-info-document-span">
-                      {doc_info.link}
+                      <a href={`http://localhost:5000/user-account/pdf-viewer/${user_info.email}/${doc_info.filename}`} target="_blank">
+                        Current doc
+                      </a>
                     </span>
                   </p>
 
@@ -146,7 +139,7 @@ function Account({
           <p className="account-info-pending-bill-p">
             <span className="account-info-title">BILL PENDIENTE: </span>
             <span className="account-info-span">
-              ${parseFloat(user_info.pending_bill?user_info.pending_bill:0.00).toFixed(2)}
+              ${user_info.pending_bill?parseFloat(user_info.pending_bill.toFixed(2)):"0.00"}
             </span>
           </p>
         </Row>
@@ -170,24 +163,63 @@ function Account({
         show_modal={show_authorization_letter_modal}
         close_modal={handleCloseAuthorizationLetterModal}
         document_name="Authorization Letter"
+        user_email={user_info.email}
+        document_filename="authority_letter"
       />
       <EditDocumentModal
         show_modal={show_w9_modal}
         close_modal={handleCloseW9Modal}
         document_name="W9"
+        user_email={user_info.email}
+        document_filename="w9"
       />
       <EditDocumentModal
         show_modal={show_insurance_modal}
         close_modal={handleCloseInsuranceModal}
         document_name="Insurance"
+        user_email={user_info.email}
+        document_filename="insurance"
       />
       <EditDocumentModal
         show_modal={show_noa_modal}
         close_modal={handleCloseNOAModal}
         document_name="NOA"
+        user_email={user_info.email}
+        document_filename="noa"
       />
     </div>
   );
 }
+
+// const redirectToDocument = async(document_name, email) => {
+//   const token = window.localStorage.getItem("user_token");
+//
+//   const config = {
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Authorization": `Bearer ${token}`,
+//       'Accept': 'application/pdf',
+//     },
+//   }
+//
+//   const pdfviewer_url = `http://localhost:5000/user-account/pdf-viewer`
+//
+//   const body = JSON.stringify({
+//       document_name,
+//   })
+//
+//   await axios.post(pdfviewer_url, body, config)
+//   .then(async (response) => {
+//     //Create a Blob from the PDF Stream
+//     const file = new Blob(
+//       [response.data],
+//       {type: 'application/pdf'});//Build a URL from the file
+//     const fileURL = URL.createObjectURL(file);//Open the URL on new Window
+//     window.open(fileURL);
+//   })
+//   .catch((err) => {
+//     console.log(err)
+//   });
+// }
 
 export default Account;
