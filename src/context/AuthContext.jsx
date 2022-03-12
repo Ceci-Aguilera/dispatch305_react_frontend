@@ -121,6 +121,39 @@ export const AuthProvider = ({ children }) => {
   };
 
 
+
+  const reset_password = async (body) => {
+
+    const temp_token = window.localStorage.getItem("user_token")
+        console.log(temp_token)
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${temp_token}`,
+      },
+    };
+
+    const reset_url = `${domain}/user-account/reset-password`;
+
+    return await axios
+      .post(reset_url, body, config)
+      .then(async (response) => {
+
+        const temp_auth = await getUser();
+        setUser(temp_auth["user"]);
+
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log("Error in Edit account")
+        console.log(error)
+        setLoading(false);
+      });
+  };
+
+
+
   const logout = async () => {
 
      window.localStorage.removeItem("user_token");
@@ -132,7 +165,7 @@ export const AuthProvider = ({ children }) => {
 
 
   return (
-    <AuthContext.Provider value={{ user, token, logout, login, edit_account }}>
+    <AuthContext.Provider value={{ user, token, logout, login, edit_account, reset_password }}>
       {children}
     </AuthContext.Provider>
   );

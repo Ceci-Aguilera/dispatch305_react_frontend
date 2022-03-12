@@ -17,6 +17,7 @@ function Account({
   onClickEditDocuments,
   user_info,
   documents_info,
+  onClickResetPasswordModal,
 }) {
   const [show_authorization_letter_modal, setShowAuthorizationLetterModal] = useState(false);
   const [show_w9_modal, setShowW9Modal] = useState(false);
@@ -64,8 +65,6 @@ function Account({
     if(doc_name === "NOA") return handleNOAModal();
   }
 
-  console.log("User model from API")
-  console.log(user_info)
 
 
   return (
@@ -155,6 +154,16 @@ function Account({
                 EDITAR INFO
               </Button>
             </div>
+
+            <div className="user-info-button-div">
+              <Button
+                variant="primary"
+                className="user-info-button"
+                onClick={(e) => onClickResetPasswordModal()}
+              >
+                RESET PASSWORD
+              </Button>
+            </div>
           </Col>
         </Row>
       </Container>
@@ -191,35 +200,5 @@ function Account({
   );
 }
 
-// const redirectToDocument = async(document_name, email) => {
-//   const token = window.localStorage.getItem("user_token");
-//
-//   const config = {
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Authorization": `Bearer ${token}`,
-//       'Accept': 'application/pdf',
-//     },
-//   }
-//
-//   const pdfviewer_url = `http://localhost:5000/user-account/pdf-viewer`
-//
-//   const body = JSON.stringify({
-//       document_name,
-//   })
-//
-//   await axios.post(pdfviewer_url, body, config)
-//   .then(async (response) => {
-//     //Create a Blob from the PDF Stream
-//     const file = new Blob(
-//       [response.data],
-//       {type: 'application/pdf'});//Build a URL from the file
-//     const fileURL = URL.createObjectURL(file);//Open the URL on new Window
-//     window.open(fileURL);
-//   })
-//   .catch((err) => {
-//     console.log(err)
-//   });
-// }
 
 export default Account;

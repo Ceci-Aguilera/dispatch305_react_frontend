@@ -9,42 +9,37 @@ import { Link } from "react-router-dom";
 import Login from "../components/Login";
 import Account from "../components/Account";
 import EditAccountModal from "../components/EditAccountModal";
+import ResetPasswordModal from "../components/ResetPasswordModal";
 
 import {useAuth} from "../context/AuthContext";
 
 export default function UserAccountInfo() {
 
-  const {user, login, logout, edit_account} = useAuth();
+  const {user, login, logout, edit_account, reset_password} = useAuth();
 
 
-  const user_info = {
-    // contact_name: "Some Contact Name",
-    // email: "SomeEmail@gmail.com",
-    // phone: "1111111",
-    // company_name: "Some Company Name",
-    // account_type: "BASICO",
-    pending_bill: "5000",
-  };
 
   const documents_info = [
     {
       name: "Authorization Letter",
-      link: "https://localhost:3000",
       filename:"authority_letter"
     },
     {
       name: "W9",
-      link: "https://localhost:3000",
       doc_name:"w9"
     },
     {
       name: "Insurance",
-      link: "https://localhost:3000",
       filename:"insurance"
+    },
+    {
+      name: "NOA",
+      filename:"noa"
     },
   ];
 
   const [show_edit_account_modal, setShowEditAccountModal] = useState(false);
+  const [show_reset_password_modal, setShowResetPasswordModal] = useState(false);
 
   const handleShowEditAccountModal = () => {
     setShowEditAccountModal(true);
@@ -54,7 +49,14 @@ export default function UserAccountInfo() {
     setShowEditAccountModal(false);
   };
 
-  console.log(user)
+  const handleShowResetPasswordModal = () => {
+    setShowResetPasswordModal(true);
+  };
+
+  const handleCloseResetPasswordModal = () => {
+    setShowResetPasswordModal(false);
+  };
+
 
   return (
     <div className="profile-div">
@@ -62,6 +64,7 @@ export default function UserAccountInfo() {
         <>
       <Account
         onClickEditAccount={handleShowEditAccountModal}
+        onClickResetPasswordModal={handleShowResetPasswordModal}
         user_info={user}
         documents_info={documents_info}
       />
@@ -71,6 +74,10 @@ export default function UserAccountInfo() {
         user_info={user}
       editAccountFunction={edit_account}
       />
+    <ResetPasswordModal show_modal={show_reset_password_modal}
+    close_modal={handleCloseResetPasswordModal}
+    user_info={user}
+    editAccountFunction={reset_password}/>
     </>
   :<Login loginFunction = {login} />}
     </div>
