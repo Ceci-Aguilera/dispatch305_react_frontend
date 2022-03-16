@@ -34,9 +34,9 @@ function ClavesSteps() {
                 <div className="claves-text-div">
                   <div className="claves-paragraph-div">
                     <p>
-                      No pague mas de lo que necesita ni fees ocultos, usted
+                      No pague más de lo que necesita ni fees ocultos, usted
                       recibira un servicio de calidad con un precio siempre
-                      adecuado pues mientras usted mas gana nosotros mas
+                      adecuado pues mientras usted más gana nosotros más
                       recibimos.
                     </p>
                   </div>
@@ -66,7 +66,7 @@ function ClavesSteps() {
                       Nuestro servicio se enfoca en sus necesidades objetivas,
                       pues cada cliente elije que zona quiere trabajar, que tipo
                       de carga quiere mover, en que horario desea trabajar y
-                      demas
+                      demás
                     </p>
                   </div>
                 </div>
@@ -109,12 +109,12 @@ function ClavesSteps() {
 
           <h2 className="claves-para-exito-tag-h2">
             Dispatch 305 es un servicio especialmente diseñado para owners op y
-            pequenas companias de cargas.
+            pequeñas compañías de cargas.
           </h2>
 
           <h2 className="claves-para-exito-tag-h2">
-            Contamos con herramientas dedicadas, así como amplia experciencia en
-            la industria de las cargas para ofrecerle el mejor precio cada dia.
+            Contamos con herramientas dedicadas, así como amplia experiencia en
+            la industria de las cargas para ofrecerle el mejor precio cada día.
           </h2>
         </div>
       </Col>

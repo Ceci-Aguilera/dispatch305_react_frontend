@@ -38,11 +38,6 @@ const {user, login, logout} = useAuth();
               <span onClick={()=>setCurrentLinkHelper("Nosotros")} className={current_link=="Nosotros"?"secondary-color-span":""}>Nosotros</span>
             </Link>
 
-            <Link exact to="#"
-              as={NavLink}  className="footer-link">
-              <span onClick={()=>setCurrentLinkHelper("Precios")} className={current_link=="Precios"?"secondary-color-span":""} >Precios</span>
-            </Link>
-
             <Link exact to="/create-account"
               as={NavLink}  className="footer-link">
               <span onClick={()=>setCurrentLinkHelper("Contratar")} className={current_link=="Contratar"?"secondary-color-span":""}>Contratar</span>

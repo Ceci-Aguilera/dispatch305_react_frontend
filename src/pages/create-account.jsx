@@ -8,7 +8,7 @@ import axios from "axios"
 import { Button, Row, Col, Form } from "react-bootstrap";
 import SimpleBanner from "../components/SimpleBanner";
 
-import banner3 from "../assets/images/banner3.jpg";
+import banner5 from "../assets/images/banner5.jpeg";
 
 import regularFolderIcon from "../assets/icons/folder-icon.png";
 
@@ -57,7 +57,7 @@ export default function CreateAccount() {
   return (
     <div>
       <SimpleBanner
-        banner_img={banner3}
+        banner_img={banner5}
         banner_img_description="Create Account Truck Cargo"
       />
 

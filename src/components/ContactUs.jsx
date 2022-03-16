@@ -42,10 +42,10 @@ function ContactUs() {
     <Row className="contact-us-row">
       <Col xs={12} sm={12} md={6} lg={6} className="contact-us-col">
         <div className="contact-us-col-body contact-us-col-first">
-          <p className="contact-us-tag-p">Contactenos</p>
+          <p className="contact-us-tag-p">Contáctenos</p>
 
           <h2 className="contact-us-tag-h2">
-            No espere mas para contactarnos, estamos aqui para encontrar los
+            No espere más para contactarnos, estamos aquí para encontrar los
             mejores rates de la insdutria para usted
           </h2>
         </div>
@@ -53,7 +53,7 @@ function ContactUs() {
 
       <Col xs={12} sm={12} md={6} lg={6} className="contact-us-col">
         <div className="contact-us-col-body contact-us-col-second">
-        <p className="contact-us-tag-p"><span className="tspan">Contactenos</span></p>
+        <p className="contact-us-tag-p"><span className="tspan">Contáctenos</span></p>
 
           <Form onSubmit={(e) => sendCommentHandler(e)}>
             <Form.Group className="mb-3 contact-us-form-group" controlId="formBasicName">

@@ -6,14 +6,14 @@ import { Button, Row, Col, Form } from "react-bootstrap";
 import SimpleBanner from "../components/SimpleBanner";
 
 import dollarIcon from "../assets/icons/money-icon.png";
-import banner4 from "../assets/images/banner4.jpg";
+import banner5 from "../assets/images/banner5.jpeg";
 import { Link } from "react-router-dom";
 
 export default function Service() {
   return (
     <div>
       <SimpleBanner
-        banner_img={banner4}
+        banner_img={banner5}
         banner_img_description={"Service Detail Truck Cargo"}
       />
 
