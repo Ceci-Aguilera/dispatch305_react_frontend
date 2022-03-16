@@ -12,6 +12,8 @@ import { NavLink } from "react-router-dom";
 import {useContextMenu} from "../context/MenuContext";
 import {useAuth} from "../context/AuthContext";
 
+import agreement_download from "../assets/files/Dispatch305-agreement.pdf";
+
 function CustomNavbar() {
 
   const {current_link, setCurrentLinkHelper} = useContextMenu();
@@ -53,6 +55,10 @@ function CustomNavbar() {
 
             <Nav.Link exact to="/create-account" as={NavLink}  className="navbar-link">
               <span onClick={()=>setCurrentLinkHelper("Contratar")} className={current_link=="Contratar"?"secondary-color-span":""}>Contratar</span>
+            </Nav.Link>
+
+            <Nav.Link href={agreement_download}   className="navbar-link">
+              Agreement
             </Nav.Link>
 
             <Nav.Link exact to="/user-account" as={NavLink}  className="navbar-link">

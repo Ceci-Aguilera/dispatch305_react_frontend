@@ -30,7 +30,7 @@
 
 .service-plans-div {
   width: 100%;
-  max-width: 500px;
+  max-width:600px;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -97,5 +97,5 @@
     margin-left: 15px;
     margin-right: 15px;
   }
-  
+
 }

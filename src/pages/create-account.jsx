@@ -65,7 +65,7 @@ export default function CreateAccount() {
 
       <h2 className="text-center create-account-custom-header2">
         <span className="create-account-din-alternate-bold-font">
-          Comenzar es muy facil
+          Comenzar es muy fácil
         </span>
       </h2>
 
@@ -79,16 +79,16 @@ export default function CreateAccount() {
 
       <div className="create-account-paragraph-div">
         <p className="create-account-paragraph-p">
-          Para crear una cuenta con nuevos brokers y mantener su informacion
-          actualizada es necesariobrindarnos una serie de documentos requeridos
+          Para crear una cuenta con nuevos brokers y mantener su información
+          actualizada es necesario brindarnos una serie de documentos requeridos
           para crear su cuenta y que podamos negociar por usted sus cargas. Los
           documentos son guardados con absoluta seguridad por nosotros y solo
-          seran utilizados para uso exclusivo de su compania.
+          serán utilizados para uso exclusivo de su compañía.
         </p>
       </div>
 
       <h4 className="text-center create-account-custom-title">
-        Complete esta forma y recibira un agreement para comenzar a recibir
+        Complete esta forma y recibirá un agreement para comenzar a recibir
         cargas
       </h4>
 
@@ -97,7 +97,7 @@ export default function CreateAccount() {
           <div key={`inline-radio`} className="mb-3 radio-div" onChange={(e) => setCurrentPlan(e.target.value)} >
           <label className='create-account-label-radio'>
           <input type="radio" name="group1" id={`inline-radio-1`} className="create-account-radio" value={"BASICO"} defaultChecked={true} />
-            <span className="create-account-label-radio-span">4% Plan Basico</span>
+            <span className="create-account-label-radio-span">4% Plan Básico</span>
           </label>
 
 

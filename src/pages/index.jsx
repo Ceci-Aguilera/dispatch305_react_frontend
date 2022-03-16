@@ -51,7 +51,7 @@ export default function Landing() {
       <div className="spacer" />
 
       <h2 className="text-center landing-custom-header2">
-        <span className="landing-din-alternate-bold-font">Comenzar es muy facil</span>
+        <span className="landing-din-alternate-bold-font">Comenzar es muy fácil</span>
       </h2>
 
       <div className="start-step-div">

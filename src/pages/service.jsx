@@ -30,25 +30,34 @@ export default function Service() {
       </div>
 
       <h4 className="text-center service-custom-title">
-        Y usted podra obtener los siguientes servicios
+        Y usted podrá obtener los siguientes servicios
       </h4>
 
       <div className="service-plans-div">
-        <h4 className="service-plan-title">3% Plan Basico</h4>
+        <h4 className="service-plan-title">3% Plan Básico</h4>
         <p className="service-p">
-          Ofertas de carga para el destino que usted prefiera Sugerencia de
-          cargas de regreso o a otros destinos con mejor rate por milla Setup
-          con nuevos brokers
+          Ofertas de carga para el destino que usted prefiera
+          <br />
+          Sugerencia de cargas de regreso o a otros destinos con mejor rate por milla
+          <br />
+           Setup con nuevos brokers
         </p>
       </div>
 
       <div className="service-plans-div">
         <h4 className="service-plan-title">5% Plan VIP</h4>
         <p className="service-p">
-          Ofertas de carga para el destino que usted prefiera Sugerencia de
-          cargas de regreso o a otros destinos con mejor rate por milla Setup
-          con nuevos brokers Negociacion para Detention o Layovers Envio de
-          documentos a su compania de Factoring Analitica semanal por camion
+          Ofertas de carga para el destino que usted prefiera
+          <br />
+           Sugerencia de cargas de regreso o a otros destinos con mejor rate por milla
+           <br />
+           Setup con nuevos brokers
+           <br />
+            Negociación para Detentión o Layovers
+            <br />
+            Envío de documentos a su companía de Factoring
+            <br />
+            Analítica semanal por camión
         </p>
       </div>
 
