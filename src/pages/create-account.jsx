@@ -15,6 +15,9 @@ import regularFolderIcon from "../assets/icons/folder-icon.png";
 import { useNavigate } from "react-router-dom";
 
 
+const domain = process.env.REACT_APP_API_DOMAIN_NAME
+
+
 
 export default function CreateAccount() {
   const [authority_letter_document, setAuthorityLetterDocument] =
@@ -273,14 +276,13 @@ const createNewAccount = async(body) => {
     }
   }
 
-  const url = 'http://localhost:5000/user-account/signup';
+  const url = `${domain}/user-account/signup`;
 
   const axios_result = await axios.post(url, body, config).then(async(res) => {
     const result = await res.data
     console.log(result);
     return "Success";
   }).catch((error) => {
-    console.log("Error")
     return "Error";
   })
 
@@ -310,19 +312,15 @@ const uploadFiles = async (email, authority_letter_document, w9_document, insura
     formData.append('documents', authority_letter_document, `authority_letter-${email}.pdf`);
     formData.append('documents', w9_document, `w9-${email}.pdf`);
     formData.append('documents', insurance_document, `insurance-${email}.pdf`);
-    // formData.append('w9', w9_document);
-    // formData.append('insurance', insurance_document);
 
     if(noa_document){
-          // formData.append('noa', noa_document);
           formData.append('documents', noa_document, `noa-${email}.pdf`);
     }
 
-  const url = `http://localhost:5000/user-account/upload-documents/${email}`;
+  const url = `${domain}/user-account/upload-documents/${email}`;
 
   await axios.post(url, formData, config).then(async(res) => {
     const result = await res.data
-    console.log(result);
   }).catch((error) => {
     console.log("Error")
   })

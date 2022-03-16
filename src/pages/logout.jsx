@@ -11,7 +11,6 @@ export default function Logout() {
 
 
   useEffect(async() => {
-    console.log("SHJSDJHS")
       await logout();
   },[])
 

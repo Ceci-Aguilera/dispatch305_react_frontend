@@ -13,7 +13,6 @@ export const MenuProvider = ({ children }) => {
 
   const setCurrentLinkHelper = async (temp_current_link) => {
     await setCurrentLink(temp_current_link);
-    // await setLoading(false);
   };
 
   

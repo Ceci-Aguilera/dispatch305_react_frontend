@@ -8,6 +8,8 @@ const domain = process.env.REACT_APP_API_DOMAIN_NAME;
 
 const AuthContext = createContext();
 
+
+
 export const getUser = async () => {
 
   const user_token = window.localStorage.getItem("user_token");
@@ -83,8 +85,6 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error in Log in")
-        console.log(error)
         setLoading(false);
       });
   };
@@ -114,8 +114,6 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error in Edit account")
-        console.log(error)
         setLoading(false);
       });
   };
@@ -146,8 +144,6 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error in Edit account")
-        console.log(error)
         setLoading(false);
       });
   };

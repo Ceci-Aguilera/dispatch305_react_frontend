@@ -9,6 +9,11 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
+
+const domain = process.env.REACT_APP_API_DOMAIN_NAME
+
+
+
 function EditDocumentModal({ show_modal, close_modal, document_name, current_doc, user_email, document_filename}) {
 
     const [new_document, setNewDocument] = useState(null);
@@ -95,13 +100,12 @@ const updateDocument = async(new_document, close_modal, user_email, document_fil
 
     formData.append('document', new_document, `${document_filename}-${user_email}.pdf`);
 
-  const url = `http://localhost:5000/user-account/update-document/${user_email}/${document_filename}`;
+  const url = `${domain}/user-account/update-document/${user_email}/${document_filename}`;
 
   await axios.post(url, formData, config).then(async(res) => {
     const result = await res.data
     close_modal()
   }).catch((error) => {
-    console.log("Error")
   })
 }
 

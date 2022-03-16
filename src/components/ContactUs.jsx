@@ -11,6 +11,12 @@ import correctIcon from "../assets/icons/correct-icon.png";
 
 import axios from "axios"
 
+
+
+const domain = process.env.REACT_APP_API_DOMAIN_NAME
+
+
+
 function ContactUs() {
 
   const [email, setEmail] = useState("");
@@ -91,13 +97,11 @@ const sendComment = async(body) => {
     }
   }
 
-  const url = 'http://localhost:5000/message/create-comment';
+  const url = `${domain}/message/create-comment`;
 
   const axios_result = await axios.post(url, body, config).then(async(res) => {
     const result = await res.data
-    console.log(result);
   }).catch((error) => {
-    console.log("Error")
   })
 
 }
