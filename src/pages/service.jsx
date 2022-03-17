@@ -34,7 +34,7 @@ export default function Service() {
       </h4>
 
       <div className="service-plans-div">
-        <h4 className="service-plan-title">3% Plan Básico</h4>
+        <h4 className="service-plan-title">4% Plan Básico</h4>
         <p className="service-p">
           Ofertas de carga para el destino que usted prefiera
           <br />
@@ -45,7 +45,7 @@ export default function Service() {
       </div>
 
       <div className="service-plans-div">
-        <h4 className="service-plan-title">5% Plan VIP</h4>
+        <h4 className="service-plan-title">6% Plan VIP</h4>
         <p className="service-p">
           Ofertas de carga para el destino que usted prefiera
           <br />

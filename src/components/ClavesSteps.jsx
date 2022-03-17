@@ -13,7 +13,7 @@ function ClavesSteps() {
         <div className="claves-para-exito-col-body  claves-para-exito-col-first">
           <div className="v-card-icon-div"></div>
           <div className="claves-para-exito-button-div">
-            <p className="claves-para-exito-button-p">CLAVES PARA EL EXITO</p>
+            <p className="claves-para-exito-button-p">CLAVES PARA EL ÉXITO</p>
           </div>
 
           <div className="spacer" />

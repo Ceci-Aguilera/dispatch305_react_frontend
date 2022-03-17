@@ -36,11 +36,17 @@ function ContactUs() {
 
   const sendCommentHandler = async(e) => {
     e.preventDefault();
-    await sendComment(body);
-    setEmail("");
-    setName("");
-    setPhone("");
-    setComment("")
+    if(!name || !email || !comment || !phone){
+      alert("Please complete all the fields")
+    }
+
+    else{
+      await sendComment(body);
+      setEmail("");
+      setName("");
+      setPhone("");
+      setComment("")
+    }
   }
 
 

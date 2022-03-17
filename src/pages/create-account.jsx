@@ -47,14 +47,18 @@ export default function CreateAccount() {
 
   const onSubmitForm = async(e) => {
     e.preventDefault();
-    const result = await createNewAccount(body);
-
-    console.log(result)
-    if (result == "Success"){
-      console.log("Send Files")
-      await uploadFiles(email, authority_letter_document, w9_document, insurance_document, noa_document);
-      navigate("/");
+    if(!authority_letter_document || !w9_document || !insurance_document){
+      alert("Please upload at least the Authority Letter, the W9, and the insurance")
     }
+    else{
+      const result = await createNewAccount(body);
+
+      if (result == "Success"){
+        await uploadFiles(email, authority_letter_document, w9_document, insurance_document, noa_document);
+        navigate("/");
+      }
+    }
+    
   }
 
   return (
@@ -303,19 +307,15 @@ const uploadFiles = async (email, authority_letter_document, w9_document, insura
 
   const formData = new FormData();
 
-    console.log(authority_letter_document);
-    console.log(w9_document);
-    console.log(insurance_document);
-    console.log(noa_document);
+      formData.append('documents', authority_letter_document, `authority_letter-${email}.pdf`);
+      formData.append('documents', w9_document, `w9-${email}.pdf`);
+      formData.append('documents', insurance_document, `insurance-${email}.pdf`);
+
+      if(noa_document){
+            formData.append('documents', noa_document, `noa-${email}.pdf`);
+      }
 
 
-    formData.append('documents', authority_letter_document, `authority_letter-${email}.pdf`);
-    formData.append('documents', w9_document, `w9-${email}.pdf`);
-    formData.append('documents', insurance_document, `insurance-${email}.pdf`);
-
-    if(noa_document){
-          formData.append('documents', noa_document, `noa-${email}.pdf`);
-    }
 
   const url = `${domain}/user-account/upload-documents/${email}`;
 
