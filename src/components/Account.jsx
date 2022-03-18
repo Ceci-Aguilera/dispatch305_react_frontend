@@ -19,7 +19,8 @@ function Account({
   documents_info,
   onClickResetPasswordModal,
 }) {
-  const [show_authorization_letter_modal, setShowAuthorizationLetterModal] = useState(false);
+  const [show_authorization_letter_modal, setShowAuthorizationLetterModal] =
+    useState(false);
   const [show_w9_modal, setShowW9Modal] = useState(false);
   const [show_insurance_modal, setShowInsuranceModal] = useState(false);
   const [show_noa_modal, setShowNOAModal] = useState(false);
@@ -40,7 +41,6 @@ function Account({
     setShowW9Modal(false);
   };
 
-
   const handleInsuranceModal = () => {
     setShowInsuranceModal(true);
   };
@@ -48,7 +48,6 @@ function Account({
   const handleCloseInsuranceModal = () => {
     setShowInsuranceModal(false);
   };
-
 
   const handleNOAModal = () => {
     setShowNOAModal(true);
@@ -59,13 +58,12 @@ function Account({
   };
 
   const getCurrentShowModal = (doc_name) => {
-    if(doc_name === "Authorization Letter") return handleAuthorizationLetterModal();
-    if(doc_name === "W9") return handleW9Modal();
-    if(doc_name === "Insurance") return handleInsuranceModal();
-    if(doc_name === "NOA") return handleNOAModal();
-  }
-
-
+    if (doc_name === "Authorization Letter")
+      return handleAuthorizationLetterModal();
+    if (doc_name === "W9") return handleW9Modal();
+    if (doc_name === "Insurance") return handleInsuranceModal();
+    if (doc_name === "NOA") return handleNOAModal();
+  };
 
   return (
     <div className="account-div">
@@ -77,58 +75,169 @@ function Account({
       <Container className="account-info-div">
         <Row className="account-info-row">
           <Col xs={12} sm={12} md={12} lg={6} className="account-info-col">
-            <p className="account-info-p">
-              <span className="account-info-title">
-                NOMBRE DE LA COMPAÑIA:{" "}
-              </span>
-              <span className="account-info-span">
-                {user_info.company_name}
-              </span>
-            </p>
+            <Row className="account-info-edit-row">
+              <Col
+                xs={12}
+                sm={12}
+                md={2}
+                lg={2}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-title">
+                  <p className="account-info-box-title">COMPANY</p>
+                </span>
+              </Col>
 
-            <p className="account-info-p">
-              <span className="account-info-title">NOMBRE DE CONTACTO: </span>
-              <span className="account-info-span">
-                {user_info.contact_name}
-              </span>
-            </p>
+              <Col
+                xs={12}
+                sm={12}
+                md={10}
+                lg={10}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-span">
+                  <div className="account-info-box-div">
+                    <p className="account-info-box-p">
+                      {user_info.company_name}
+                    </p>
+                  </div>
+                </span>
+              </Col>
+            </Row>
 
-            <p className="account-info-p">
-              <span className="account-info-title">TELEFONO: </span>
-              <span className="account-info-span">{user_info.phone}</span>
-            </p>
+            <Row className="account-info-edit-row">
+              <Col
+               xs={12}
+                sm={12}
+                md={2}
+                lg={2}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-title">
+                  <p className="account-info-box-title">CONTACT</p>
+                </span>
+              </Col>
 
-            <p className="account-info-p">
-              <span className="account-info-title">EMAIL: </span>
-              <span className="account-info-span">{user_info.email}</span>
-            </p>
+              <Col
+                xs={12}
+                sm={12}
+                md={10}
+                lg={10}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-span">
+                  <div className="account-info-box-div">
+                    <p className="account-info-box-p">
+                      {user_info.contact_name}
+                    </p>
+                  </div>
+                </span>
+              </Col>
+            </Row>
+
+            <Row className="account-info-edit-row">
+              <Col
+                xs={12}
+                sm={12}
+                md={2}
+                lg={2}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-title">
+                  <p className="account-info-box-title">PHONE</p>
+                </span>
+              </Col>
+
+              <Col
+               xs={12}
+                sm={12}
+                md={10}
+                lg={10}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-span">
+                  <div className="account-info-box-div">
+                    <p className="account-info-box-p">{user_info.phone}</p>
+                  </div>
+                </span>
+              </Col>
+            </Row>
+
+            <Row className="account-info-edit-row">
+              <Col
+               xs={12}
+                sm={12}
+                md={2}
+                lg={2}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-title">
+                  <p className="account-info-box-title">EMAIL</p>
+                </span>
+              </Col>
+
+              <Col
+                xs={12}
+                sm={12}
+                md={10}
+                lg={10}
+                className="account-info-edit-col"
+              >
+                <span className="account-info-span">
+                  <div className="account-info-box-div">
+                    <p className="account-info-box-p">{user_info.email}</p>
+                  </div>
+                </span>
+              </Col>
+            </Row>
           </Col>
 
           <Col xs={12} sm={12} md={12} lg={6} className="account-info-col">
             {documents_info.map((doc_info, index) => {
               return (
-                <div key={index} className="account-info-documents-div">
-                  <p className="account-info-document-p">
-                    <span className="account-info-document-title">
-                      {doc_info.name}:{" "}
+                <Row key={index} className="account-info-edit-row">
+                  <Col
+                   xs={12}
+                sm={12}
+                    md={10}
+                    lg={10}
+                    className="account-info-edit-col"
+                  >
+                    <span className="account-info-span">
+                      <div className="account-info-box-div">
+                        <p className="account-info-box-p">
+                          <a
+                            href={`http://localhost:5000/user-account/pdf-viewer/${user_info.email}/${doc_info.filename}`}
+                            target="_blank"
+                            className="account-info-box-a"
+                          >
+                            {doc_info.name}.pdf
+                          </a>
+                        </p>
+                      </div>
                     </span>
-                    <span className="account-info-document-span">
-                      <a href={`http://localhost:5000/user-account/pdf-viewer/${user_info.email}/${doc_info.filename}`} target="_blank">
-                        Current doc
-                      </a>
-                    </span>
-                  </p>
+                  </Col>
 
-                  <div className="user-info-document-button-div">
-                    <Button
-                      variant="primary"
-                      className="user-info-document-button"
-                      onClick={(e) => getCurrentShowModal(doc_info.name)}
-                    >
-                      CAMBIAR
-                    </Button>
-                  </div>
-                </div>
+                  <Col
+                   xs={12}
+                sm={12}
+                    md={2}
+                    lg={2}
+                    className="account-info-edit-col"
+                  >
+                    <span className="account-info-title">
+                      <div className="user-info-document-button-div">
+                        <Button
+                          variant="primary"
+                          className="user-info-document-button"
+                          onClick={(e) => getCurrentShowModal(doc_info.name)}
+                        >
+                          CAMBIAR
+                        </Button>
+                      </div>
+                    </span>
+                  </Col>
+                </Row>
               );
             })}
           </Col>
@@ -136,9 +245,12 @@ function Account({
 
         <Row className="account-info-row">
           <p className="account-info-pending-bill-p">
-            <span className="account-info-title">BILL PENDIENTE: </span>
+            <span className="account-info-title">PRÓXIMO BILL: </span>
             <span className="account-info-span">
-              ${user_info.pending_bill?parseFloat(user_info.pending_bill.toFixed(2)):"0.00"}
+              $
+              {user_info.pending_bill
+                ? parseFloat(user_info.pending_bill.toFixed(2))
+                : "0.00"}
             </span>
           </p>
         </Row>
@@ -199,6 +311,5 @@ function Account({
     </div>
   );
 }
-
 
 export default Account;

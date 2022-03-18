@@ -16,11 +16,12 @@ height: 50px;
 }
 
 .account-info-pending-bill-p{
+    margin-top: 50px !important;
     text-align:center;
 }
 
 .account-info-title, .account-info-document-title{
-    color: #35363a;
+    color: #f89422;
     font-family: "Arial" !important;
     font-weight: bold !important;
 }
@@ -32,7 +33,7 @@ height: 50px;
 
 .user-info-button-div{
     width: 250px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
@@ -90,6 +91,42 @@ height: 50px;
     margin-right: auto;
 }
 
+.account-info-p-div{
+display: flex !important;
+flex-direction: row !important;
+column-gap: 10px !important;
+}
+
+.account-info-box-div{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #9d9e9f !important;
+}
+
+
+.account-info-edit-col{
+    margin-top: 10px !important;
+}
+
+.account-info-box-title{
+    padding-top: 10px !important;
+}
+
+.account-info-box-p{
+    padding-top: 10px !important;
+    padding-left: 10px !important;
+}
+
+.account-info-box-a{
+    color: #9d9e9f !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+.account-info-box-a:hover{
+    color: #f89422 !important;
+}
+
 @media screen and (max-width: 578px){
 
     .account-info-col{
@@ -129,5 +166,28 @@ height: 50px;
 
     .account-info-col{
         max-width: 90%;
+    }
+
+    .account-info-box-p{
+        padding-top: 10px !important;
+        padding-left: 0px !important;
+    }
+
+    .account-info-p-div{
+        display: flex !important;
+        flex-direction: column !important;
+        column-gap: 10px !important;
+        }
+
+    .account-info-box-div{
+        width: 300px;
+        height: 50px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border: 1px solid #9d9e9f !important;
+    }
+
+    .account-info-col{
+        margin-top: 50px !important;
     }
 }

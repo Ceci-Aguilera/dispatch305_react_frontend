@@ -79,7 +79,7 @@ export default function Landing() {
       <div className="spacer" />
 
       <div className="contact-banner">
-        <h2 className="contact-banner-title-h2">CARGUE SU CAMIÓN</h2>
+        <h1 className="contact-banner-title-h2">CARGUE SU CAMIÓN</h1>
       </div>
 
       <div className="spacer" />

@@ -107,17 +107,17 @@ function PrincipalBanner() {
             <div className="ThirdBanner-text-div">
               <h2 className="ThirdBanner-custom-header2">
                 <span className="ThirdBanner-din-alternate-bold-font">
-                  USTED DECIDE 48 ESTADOS
+                  NEGOCIAMOS CON LOS BROKERS
                 </span>
               </h2>
               <h2 className="ThirdBanner-custom-header2">
                 <span className="ThirdBanner-din-alternate-bold-font">
-                  ZONAS DE SU PREFERENCIA
+                  LOS MEJORES RATES
                 </span>
               </h2>
               <h2 className="ThirdBanner-custom-header2">
                 <span className="ThirdBanner-din-alternate-bold-font">
-                  O RUTAS DEDICADAS
+                  DEL MOMENTO
                 </span>
               </h2>
             </div>

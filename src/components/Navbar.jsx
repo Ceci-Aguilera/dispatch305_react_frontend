@@ -49,15 +49,11 @@ function CustomNavbar() {
               <span onClick={()=>setCurrentLinkHelper("Home")} className={current_link=="Home"?"secondary-color-span":""}>Home</span>
             </Nav.Link>
 
-            <Nav.Link exact to="/service"  as={NavLink}  className="navbar-link">
-              <span onClick={()=>setCurrentLinkHelper("Nosotros")} className={current_link=="Nosotros"?"secondary-color-span":""}>Nosotros</span>
-            </Nav.Link>
-
             <Nav.Link exact to="/create-account" as={NavLink}  className="navbar-link">
               <span onClick={()=>setCurrentLinkHelper("Contratar")} className={current_link=="Contratar"?"secondary-color-span":""}>Contratar</span>
             </Nav.Link>
 
-            <Nav.Link href={agreement_download}   className="navbar-link">
+            <Nav.Link href={agreement_download} target="_blank"  className="navbar-link">
               Agreement
             </Nav.Link>
 

@@ -12,6 +12,8 @@ import { NavLink } from "react-router-dom";
 import {useContextMenu} from "../context/MenuContext";
 import {useAuth} from "../context/AuthContext";
 
+import agreement_download from "../assets/files/Dispatch305-agreement.pdf";
+
 function Footer() {
 
 const {current_link, setCurrentLinkHelper} = useContextMenu();
@@ -33,14 +35,13 @@ const {user, login, logout} = useAuth();
               <span onClick={()=>setCurrentLinkHelper("Home")} className={current_link=="Home"?"secondary-color-span":""}>Home</span>
             </Link>
 
-            <Link exact to="/service"
-              as={NavLink}  className="footer-link">
-              <span onClick={()=>setCurrentLinkHelper("Nosotros")} className={current_link=="Nosotros"?"secondary-color-span":""}>Nosotros</span>
-            </Link>
-
             <Link exact to="/create-account"
               as={NavLink}  className="footer-link">
               <span onClick={()=>setCurrentLinkHelper("Contratar")} className={current_link=="Contratar"?"secondary-color-span":""}>Contratar</span>
+            </Link>
+
+            <Link to={agreement_download}  target="_blank" className="footer-link">
+              Agreement
             </Link>
 
             <Link exact to="/user-account" as={NavLink}  className="footer-link">
