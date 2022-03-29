@@ -56,7 +56,7 @@ const {user, login, logout} = useAuth();
 
             <Link exact to="/"
               as={NavLink}  className="footer-link">
-              <span className="secondary-color-span">305-776-4044</span>
+              <span className="secondary-color-span">786-857-4659</span>
             </Link>
 
           </div>
@@ -79,8 +79,12 @@ const {user, login, logout} = useAuth();
 
         <Row className="contact-us-s-media-row">
           <div className="contact-us-s-media-div">
+          <a href="https://www.facebook.com/Dispatch305.US" className="contact-us-s-media-a">
             <img src={facebookIcon} alt="Facebook Icon Truck Cargo" />
+          </a>
+          <a href="https://www.instagram.com/explore/locations/103686632282068/dispatch305/" className="contact-us-s-media-a">
             <img src={instagramIcon} alt="Instagram Icon Truck Cargo" />
+          </a>
           </div>
         </Row>
 

@@ -81,6 +81,11 @@
     margin-top: 20px;
 }
 
+.contact-us-s-media-a{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
 .developer-url-text{
     color: #9d9e9f;
     text-decoration: none !important;
