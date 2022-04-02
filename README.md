@@ -89,7 +89,7 @@ Dispatch305 is a service that helps dispatchers to communicate with both drivers
 
 ### Screenshots of the Frontend React App
 
-![alt text](./screenshots/driver.png) ![alt text](./screenshots/driver_2.png)
+![alt text](./screenshots/driver.png?) ![alt text](./screenshots/driver_2.png)
 
 ![alt text](./screenshots/driver_3.png) ![alt text](./screenshots/driver_4.png)
 
@@ -119,7 +119,7 @@ Dispatch305 is a service that helps dispatchers to communicate with both drivers
 
 <a name="screenshots_original"></a>
 
-### Screenshots of the Original Frontend Design]
+### Screenshots of the Original Frontend Design
 
 __NOTE:__ Some of the components of the original design have been changed, such as banner images, and name of the service (from ALL4LOADS to Dispatch305). This original design does not include the client's views after log in.
 
