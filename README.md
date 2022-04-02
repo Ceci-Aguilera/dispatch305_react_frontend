@@ -7,6 +7,7 @@
 3. [Brief Introduction and Basic Workflow of the Website](#frontend)
 4. [Screenshots of the Frontend React App](#screenshots_frontend)
 5. [Screenshots of the Admin Panel Backend](#screenshots)
+6. [Screenshots of the Original Frontend Design](#screenshots_original)
 
 
 <a name="docker"></a>
@@ -49,8 +50,6 @@
 1. Install dependencies:
    ```bash
    npm install
-   ```
-
    ```
 
 1. Configure the environment variables: Create an .env file inside the root folder and set up the following environment variables:
@@ -115,3 +114,17 @@ Dispatch305 is a service that helps dispatchers to communicate with both drivers
 
 ![alt text](./screenshots/admin_dispatcher_trucks_cargo_view.png)
 
+
+
+
+<a name="screenshots_original"></a>
+
+### Screenshots of the Original Frontend Design]
+
+__NOTE:__ Some of the components of the original design have been changed, such as banner images, and name of the service (from ALL4LOADS to Dispatch305). This original design does not include the client's views after log in.
+
+![alt text](./screenshots/Original_1.jpg)
+
+![alt text](./screenshots/Original_2.jpg)
+
+![alt text](./screenshots/Original_3.jpg)
