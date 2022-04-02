@@ -56,7 +56,7 @@ const {user, login, logout} = useAuth();
 
             <Link exact to="/"
               as={NavLink}  className="footer-link">
-              <span className="secondary-color-span">786-857-4659</span>
+              <span className="secondary-color-span">786-783-8421</span>
             </Link>
 
           </div>

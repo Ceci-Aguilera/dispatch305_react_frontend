@@ -68,7 +68,7 @@ function CustomNavbar() {
             :""}
 
             <Nav.Link href="/" className="navbar-link">
-              <span className="secondary-color-span">786-857-4659</span>
+              <span className="secondary-color-span">786-783-8421</span>
             </Nav.Link>
 
           </Nav>

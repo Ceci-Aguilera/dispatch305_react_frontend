@@ -1,0 +1,9 @@
+.git
+.gitignore
+.prettierrc
+**/node_modules
+node_modules
+npm-debug.log
+README.md
+LICENSE
+.vscode

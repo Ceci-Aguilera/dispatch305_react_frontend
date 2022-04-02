@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Dispatch305 React Frontend ![alt text](./screenshots/navbar_logo.jpeg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [Quick Installation for testing using Docker](#docker)
+2. [Custom Installation](#installation)
+3. [Brief Introduction and Basic Workflow of the Website](#frontend)
+4. [Screenshots of the Frontend React App](#screenshots_frontend)
+5. [Screenshots of the Admin Panel Backend](#screenshots)
 
-In the project directory, you can run:
 
-### `npm start`
+<a name="docker"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Quick Installation for testing using Docker
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repo:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/Ceci-Aguilera/dispatch305_react_frontend.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install Docker and Docker Compose
 
-### `npm run build`
+1. Configure the environment variables: Create an .env file inside the root folder and set up the following environment variables:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```text
+    REACT_APP_API_DOMAIN_NAME (The url of the backend, for example, https://backend_api.com)
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Run the command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   docker-compose up -d --build
+   ```
 
-### `npm run eject`
+1. Congratulations =) !!! the app should be running in [localhost:80](http://localhost:80)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a name="installation"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Custom Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repo:
 
-## Learn More
+   ```bash
+   git clone https://github.com/Ceci-Aguilera/dispatch305_react_frontend.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```
 
-### Code Splitting
+1. Configure the environment variables: Create an .env file inside the root folder and set up the following environment variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```text
+    REACT_APP_API_DOMAIN_NAME (The url of the backend, for example, https://backend_api.com)
+   ```
 
-### Analyzing the Bundle Size
+1. Run the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+1. Congratulations =) !!! the app should be running in [localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+<a name="frontend"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Brief Introduction
 
-### Deployment
+Dispatch305 is a service that helps dispatchers to communicate with both drivers and brokers. From now on, we call DISPATCH305 to the company only, and so we call  _drivers_ to the _clients_ while _dispatchers_ will be often called _staff members_. In addition, the services offered by the website will be referred as:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- _Searching a Cargo_: When a client requests the dispatcher to look out for an Agency with a Cargo to transport. In this case the staff member should contact a broker (Agency) and make the arraignments.
+- _Sending Analytics_: Every Friday, a bill should be sent to every client with the weekly pending bill amount and a description of the charges. In addition, for the clients with a VIP account, an analytics resume of the week should also be sent.
+- _Managing POD_: When a Cargo is delivered, the VIP clients may request the staff member assigned to them to manage the sending of the _Rate Conf_ and the _POD_ (this are 2 PDF files needed as proof of service and delivery).
 
-### `npm run build` fails to minify
+#### Basic Workflow of the Website
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. __User Registration:__ First, the client registers at [dispatch305.com](https://www.dispatch305.com/create-account) (the Frontend website created using REACT js). During this step, the client should provide basic account information such as name, company, ..., and should also upload the 4 basic PDF files that most brokers require for hiring them to deliver cargo.
+2. __Account Activation:__ When the new account is created, it is set to inactive and the _Admin User_ is notified. The, the _Admin User_ assigns a staff member to the client. From this point on, the staff member is said to be the client's dispatcher. The client must download the PDF that is under the section Agreement in the Frontend app. Once this steps are completed, the client's account is set to active.
+3. __Requesting Services and Billing:__ Now and while the account is active, a client with a plan BASICO (basic account) can request the dispatcher to offer the service of _Searching a Cargo_, while VIP clients can ask for the services of _Searching a Cargo_, _Sending Analytics_, and  _Managing POD_. Regardless of which type of account a client has, a Bill will be sent to them with the pending amount to pay for the services offered in that week from DISPATCH305. When a user fails to pay the weekly bill (usually a timeline of 3 days offered), the account becomes inactive until the bill is paid.
+4. __Factoring:__ After the user requests a _Searching a Cargo_ service, and the Cargo is found by the staff member, and later delivered by the client, if the client has a VIP account, the staff member can be requested to offer a _Managing POD_ service. In order to do that, the client must send the PDF files required, and the staff member should upload them to DISPATCH305's Admin Panel.
+
+
+<a name="screenshots_frontend"></a>
+
+### Screenshots of the Frontend React App
+
+![alt text](./screenshots/driver.png) ![alt text](./screenshots/driver_2.png)
+
+![alt text](./screenshots/driver_3.png) ![alt text](./screenshots/driver_4.png)
+
+![alt text](./screenshots/services.png)
+
+![alt text](./screenshots/driver_6.png)
+
+
+<a name="screenshots"></a>
+
+### Screenshots of the Admin Panel
+
+![alt text](./screenshots/admin_dispatcher_view.png)  ![alt text](./screenshots/admin_dispathcer_user_trucks_cargo_detail_view.png)
+
+![alt text](./screenshots/admin_edit_trucks_cargo.png)  ![alt text](./screenshots/admin_edit_save_trucks_cargo.png)
+
+---
+
+![alt text](./screenshots/admin_dispatcher_user_view.png)
+
+---
+
+![alt text](./screenshots/admin_dispatcher_trucks_cargo_view.png)
+
