@@ -24,6 +24,8 @@ import CreateAccount from "./pages/create-account";
 import UserAccountInfo from "./pages/user-account";
 import Service from "./pages/service";
 import Logout from "./pages/logout";
+import ResetPasswordComponent from "./components/ResetPasswordComponent"
+import SendRequestResetPasswordComponent from "./pages/send-reset-password"
 
 // Import Components
 import Layout from "./components/Layout";
@@ -45,6 +47,8 @@ render(
         <Route exact path="/service" element={<Service />} />
         <Route exact path="/user-account" element={<UserAccountInfo />} />
         <Route exact path="/logout" element={<Logout />} />
+        <Route path="reset-password/:uid/:token" element={<ResetPasswordComponent />} />
+        <Route path="send-reset-password-request" element={<SendRequestResetPasswordComponent />} />
       </Routes>
     </Layout>
     </MenuProvider>

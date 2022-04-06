@@ -66,7 +66,16 @@ function Login({loginFunction}) {
               </p>
             </div>
 
+            <div className="login-signup-res-pass-div">
+              <p className="login-new-account-p">
+                <Link to="/send-reset-password-request" className="login-new-account-link">
+                  Reset Password
+                </Link>
+              </p>
+            </div>
+
             <div className="login-button-div">
+            
               <Button variant="primary" className="login-button" type="submit">
                 LOGIN
               </Button>
