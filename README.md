@@ -14,6 +14,7 @@
 1. [Description](#frontend)
 1. [Install (Run) with Docker](#docker)
 1. [Installation without Docker](#installation)
+1. [Run with the Flask Backend (with and without Docker)](#connect_backend)
 1. [Screenshots of the Frontend React App](#screenshots_frontend)
 1. [Screenshots of the Admin Panel Backend](#screenshots)
 1. [Screenshots of the Original Frontend Design](#screenshots_original)
