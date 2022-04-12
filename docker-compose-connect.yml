@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  nginx-react:
+    container_name: ngixreactapp
+    build:
+      context: ./dispatch305_react_frontend
+      dockerfile: Dockerfile
+    env_file: dispatch305_react_frontend/.env
+    ports:
+      - 80:80
+    environment:
+      NODE_ENV: production
+
+  api:
+    build: 
+      context: ./dispatch305_flask_backend_api
+      dockerfile: Dockerfile
+    container_name: "dispatch305-flask-backend-api"
+    ports:
+      - 5000:5050
+    env_file:
+      - ./dispatch305_flask_backend_api/config/.env
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=docker_dispatch305_user
+      - POSTGRES_PASSWORD=docker_dispatch305_pass
+      - POSTGRES_DB=docker_dispatch305_db
+
+volumes:
+  postgres_data:
